@@ -9,7 +9,7 @@ module spi_controller(
 	input  wire				  clk,	// Opal Kelly ti_clk
 	input  wire				  rst,	// Opal Kelly reset
 	input  wire				  mode, // Opal Kelly write bit: 2'b00 for nop, 2'b01 for write, 2'b10 for read
-	input  wrie 			  clear_request,	// OK clr DAC pin
+	input  wire 			  clear_request,	// OK clr DAC pin
 	input  wire [15:0]	  	  data_from_user,	// waveform_info
 
 
