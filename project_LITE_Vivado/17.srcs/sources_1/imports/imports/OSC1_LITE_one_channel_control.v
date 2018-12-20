@@ -39,7 +39,7 @@ wire 		clear_request;
 wire [15:0]	data_from_user;
 wire [15:0]	sdo;
 
-assign led = rst ? 8'b10000001 : 8'b10101010;
+assign led = rst ? 8'b10101010 : {6'b111111,mode};
 
 spi_controller dac_spi(
 	.clk(clk),	// Opal Kelly ti_clk
