@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Thu Dec 20 11:00:03 2018
+| Date         : Thu Dec 20 11:25:41 2018
 | Host         : EECS-TOYODA running 64-bit major release  (build 9200)
 | Command      : report_utilization -file OSC1_LITE_Control_utilization_synth.rpt -pb OSC1_LITE_Control_utilization_synth.pb
 | Design       : OSC1_LITE_Control

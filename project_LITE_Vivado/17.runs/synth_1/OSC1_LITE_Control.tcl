@@ -14,12 +14,12 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/OSC1-36-H-uDriver-Control/DAC_spi_master.v
+  C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v
   {C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okCoreHarness.v}
   {C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okLibrary.v}
   {C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okWireIn.v}
   {C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okWireOut.v}
-  C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Vivado_Project/project_1/project_1.srcs/sources_1/imports/OSC1-36-H-uDriver-Control/OSC1_LITE_one_channel_control.v
+  C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

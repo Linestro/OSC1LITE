@@ -70,8 +70,8 @@ wire [17*1-1:0]  ok2x;
 okWireOR # (.N(1)) wireOR (ok2, ok2x);
 okWireIn     wi00 (.ok1(ok1),                           .ep_addr(8'h00), .ep_dataout({sys_ctrl_pad1,rst}));
 okWireIn     wi01 (.ok1(ok1),                           .ep_addr(8'h01), .ep_dataout({sys_ctrl_pad2,mode}));
-okWireIn     wi02 (.ok1(ok1),                           .ep_addr(8'h00), .ep_dataout({sys_ctrl_pad3,clear_request}));
-okWireIn     wi03 (.ok1(ok1),                           .ep_addr(8'h01), .ep_dataout(data_from_user));
+okWireIn     wi02 (.ok1(ok1),                           .ep_addr(8'h02), .ep_dataout({sys_ctrl_pad3,clear_request}));
+okWireIn     wi03 (.ok1(ok1),                           .ep_addr(8'h03), .ep_dataout(data_from_user));
 
 okWireOut    wo21 (.ok1(ok1), .ok2(ok2x[ 0*17 +: 17 ]), .ep_addr(8'h21), .ep_datain(sdo));
 
