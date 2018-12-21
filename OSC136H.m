@@ -1,20 +1,6 @@
 classdef OSC136H < handle
     
     properties
-        % Channels is a (36, 3) matrix, row corresponds to an individual
-        % channel, columns are (pipe_in wf, trigger select, on_fpga wf)
-        % Pipe_In wf - not used in current iteration
-        % trigger select - 0 for PC trigger, 1 for external
-        % on_fpga wf - waveform selector for generated wf 1:4 are options
-        Channels
-        
-        % Waveforms is a (4, 4) matrix, row corresponds to an individual
-        % pre-programmed waveform, columns are (num_pulses, amp, pw, period)
-        % num_pulses - num_pulses sent on trigger
-        % amp - amplitude of wave
-        % pw - pulse width (describes duty cycle)
-        % period - frequency (ms)
-        Waveforms
         
         % OKFP Dev object for using the Opal Kelly FP Library
         dev
@@ -31,8 +17,6 @@ classdef OSC136H < handle
                 loadlibrary('okFrontPanel', 'okFrontPanelDLL.h');
             end
             % Initialize a new OSC136H object
-            obj.Channels = zeros(36, 3); 
-            obj.Waveforms = zeros(4, 4);
             obj.dev = calllib('okFrontPanel', 'okFrontPanel_Construct');
             fprintf('Successfully loaded okFrontPanel.\n');
         end
