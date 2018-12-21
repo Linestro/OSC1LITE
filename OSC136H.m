@@ -194,8 +194,9 @@ classdef OSC136H < handle
                 return
             end
             fprintf('Writing %d to the register\n', value)
+            this.WriteToWireIn(hex2dec('03'), 0, 16, value);	% Update the value first to avoid potential data loss
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 1);		
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
-            this.WriteToWireIn(hex2dec('03'), 0, 16, value);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
         end
