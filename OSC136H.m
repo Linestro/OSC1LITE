@@ -60,7 +60,7 @@ classdef OSC136H < handle
             buf = libpointer('uint32Ptr', 10);
             calllib('okFrontPanel', 'okFrontPanel_UpdateWireOuts', this.dev);
             buf = calllib('okFrontPanel', 'okFrontPanel_GetWireOutValue', this.dev, endpoint);
-            fprintf('WireOut endpoint decimal %d: ', endpoint);
+            fprintf('WireOut endpoint endpoint %s: ', dec2hex(endpoint));
             fprintf(dec2bin(buf, WIREIN_SIZE));
             fprintf('\n');
         end
