@@ -55,6 +55,10 @@ classdef OSC136H < handle
         % the 16-bit wire. Useful for checking whether updates worked
         % correctly.
         function OutputWireInVal(this, endpoint)
+        	if endpoint > 32
+        		fprintf('Out of scope of WireIn\n');
+        		return;
+        	end
             WIREIN_SIZE = 16;
             buf = libpointer('uint32Ptr', 10);
             calllib('okFrontPanel', 'okFrontPanel_GetWireInValue', this.dev, endpoint, buf);
@@ -64,6 +68,10 @@ classdef OSC136H < handle
         end
 
         function OutputWireOutVal(this, endpoint)
+        	if endpoint <= 32
+        		fprintf('Out of scope of WireOut\n');
+        		return;
+        	end
             WIREIN_SIZE = 16;
             buf = libpointer('uint32Ptr', 10);
             calllib('okFrontPanel', 'okFrontPanel_UpdateWireOuts', this.dev);
@@ -85,6 +93,7 @@ classdef OSC136H < handle
             val =  bitshift(bitor(0, value), shifter);
             calllib('okFrontPanel', 'okFrontPanel_SetWireInValue', this.dev, endpoint, val, mask);
             calllib('okFrontPanel', 'okFrontPanel_UpdateWireIns', this.dev);
+            fprintf('WriteToWireIn %d: %d\n', endpoint, value);
         end
                 
         % Disconnect
@@ -183,14 +192,57 @@ classdef OSC136H < handle
             end
             
             fprintf('Reseting system to default state\n')
-            % calllib('okFrontPanel', 'okFrontPanel_SetWireInValue', this.dev, hex2dec('00'), 1, 1);
-            % calllib('okFrontPanel', 'okFrontPanel_UpdateWireIns', this.dev);
-            % calllib('okFrontPanel', 'okFrontPanel_SetWireInValue', this.dev, hex2dec('00'), 0, 1);
-            % calllib('okFrontPanel', 'okFrontPanel_UpdateWireIns', this.dev);
 
             this.WriteToWireIn(hex2dec('00'), 0, 16, 1);
+            this.WriteToWireIn(hex2dec('01'), 0, 16, 0);
+            this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
+            this.WriteToWireIn(hex2dec('03'), 0, 16, 0);
+
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
-        end        
+        end      
+
+        function ec = EnableWrite(this, value)
+            ec = 0;
+            open = calllib('okFrontPanel', 'okFrontPanel_IsOpen', this.dev);
+            if ~open
+                fprintf('Failed to Enable Write\n')
+                ec = -1;
+                return
+            end
+            fprintf('Writing %d to the register\n', value)
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
+            this.WriteToWireIn(hex2dec('03'), 0, 16, value);
+            this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
+            this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
+        end
+
+        function ec = EnableRead(this)
+            ec = 0;
+            open = calllib('okFrontPanel', 'okFrontPanel_IsOpen', this.dev);
+            if ~open
+                fprintf('Failed to Enable Read\n')
+                ec = -1;
+                return
+            end
+            fprintf('Reading from the register\n')
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
+            this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
+            this.WriteToWireIn(hex2dec('01'), 0, 16, 2);
+        end
+
+        function ec = EnableClear(this)
+            ec = 0;
+            open = calllib('okFrontPanel', 'okFrontPanel_IsOpen', this.dev);
+            if ~open
+                fprintf('Failed to Enable Clear\n')
+                ec = -1;
+                return
+            end
+            fprintf('Clearing the register\n')
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
+            this.WriteToWireIn(hex2dec('02'), 0, 16, 1);
+            this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
+        end    
     end
 end
 
