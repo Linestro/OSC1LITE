@@ -412,8 +412,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports {din}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {trigout[32]}]
 
 ## JP3-14 
-#set_property PACKAGE_PIN C11 [get_ports {sdo}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {sdo}]
+set_property PACKAGE_PIN C11 [get_ports {sdo}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sdo}]
 
 ## JP3-15 
 #set_property PACKAGE_PIN B12 [get_ports {trigout[34]}]

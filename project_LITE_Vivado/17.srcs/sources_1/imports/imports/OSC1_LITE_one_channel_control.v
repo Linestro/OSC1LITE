@@ -10,9 +10,11 @@ module OSC1_LITE_Control(
 	output wire        hi_muxsel,
 	
 
-	input  wire			clk,
+	input  wire		   clk,
 
 	output wire [7:0]  led,
+
+
 
 	/* Output pins*/
 	output wire		clear,
@@ -37,7 +39,8 @@ wire 		rst;
 wire [1:0]	mode;
 wire 		clear_request;
 wire [15:0]	data_from_user;
-wire [15:0]	sdo;
+
+wire [15:0] sdo;
 
 assign led = rst ? 8'b10101010 : {6'b111111,mode};
 
@@ -50,7 +53,7 @@ spi_controller dac_spi(
 
 
 
-	.sdo(sdo),		// DAC output sdo[15:0]. Should contain read data only when read from register
+	// .sdo(sdo),		// DAC output sdo[15:0]. Should contain read data only when read from register
 					// For non-feedback control purpose, this variable should not be affecting functionality. See Manual Page 10.
 
 	/* Output pins*/

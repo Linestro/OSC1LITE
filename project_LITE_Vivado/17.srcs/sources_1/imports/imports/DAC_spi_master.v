@@ -14,7 +14,7 @@ module spi_controller(
 
 
 
-	input  wire [15:0]		  sdo,		// DAC output sdo[15:0]. Should contain read data only when read from register
+	//input  wire [15:0]		  sdo,		// DAC output sdo[15:0]. Should contain read data only when read from register
 										// For non-feedback control purpose, this variable should not be affecting functionality. See Manual Page 10.
 
 	/* Output pins*/

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a15tftg256-1" LaunchTime="1545330295">
+<GenRun Id="impl_1" LaunchPart="xc7a15tftg256-1" LaunchTime="1545412998">
+  <File Type="PWROPT-DRC" Name="OSC1_LITE_Control_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="OSC1_LITE_Control_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="OSC1_LITE_Control_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="OSC1_LITE_Control_power_routed.rpx"/>
   <File Type="PA-TCL" Name="OSC1_LITE_Control.tcl"/>
-  <File Type="INIT-TIMING" Name="OSC1_LITE_Control_timing_summary_init.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="OSC1_LITE_Control_methodology_drc_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="OSC1_LITE_Control_drc_pwropted.rpt"/>
+  <File Type="OPT-HWDEF" Name="OSC1_LITE_Control.hwdef"/>
   <File Type="RDI-RDI" Name="OSC1_LITE_Control.vdi"/>
   <File Type="OPT-DCP" Name="OSC1_LITE_Control_opt.dcp"/>
-  <File Type="OPT-HWDEF" Name="OSC1_LITE_Control.hwdef"/>
   <File Type="OPT-DRC" Name="OSC1_LITE_Control_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="OSC1_LITE_Control_timing_summary_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="OSC1_LITE_Control_pwropt.dcp"/>
@@ -31,14 +31,14 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="OSC1_LITE_Control_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="OSC1_LITE_Control_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="OSC1_LITE_Control_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="OSC1_LITE_Control_drc_routed.rpx"/>
   <File Type="BG-BIN" Name="OSC1_LITE_Control.bin"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="OSC1_LITE_Control_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="OSC1_LITE_Control_drc_routed.rpx"/>
   <File Type="BG-DRC" Name="OSC1_LITE_Control.drc"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="OSC1_LITE_Control_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="OSC1_LITE_Control_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MSK" Name="OSC1_LITE_Control.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="OSC1_LITE_Control_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="OSC1_LITE_Control_methodology_drc_routed.rpx"/>
   <File Type="BG-BGN" Name="OSC1_LITE_Control.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="OSC1_LITE_Control_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR" Name="OSC1_LITE_Control_power_routed.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="OSC1_LITE_Control_power_summary_routed.pb"/>
   <File Type="ROUTE-STATUS" Name="OSC1_LITE_Control_route_status.rpt"/>
