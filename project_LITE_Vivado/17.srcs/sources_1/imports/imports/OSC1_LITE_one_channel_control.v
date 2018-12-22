@@ -20,7 +20,8 @@ module OSC1_LITE_Control(
 	output wire		clear,
 	output wire		latch,
 	output wire		sclk,
-	output wire		din
+	output wire		din,
+	input wire 		sdo_bit
 	);
 
 // Target interface bus:
@@ -29,29 +30,36 @@ wire [30:0]  ok1;
 wire [16:0]  ok2;
 
 wire [14:0]  sys_ctrl_pad1;
-wire [13:0]  sys_ctrl_pad2;
+wire [12:0]  sys_ctrl_pad2;
 wire [14:0]  sys_ctrl_pad3;
+
+reg [6:0] 	 clk_counter;
 
 
 assign hi_muxsel = 1'b0;
 
+//input wire 		sdo_bit;
 wire 		rst;	
-wire [1:0]	mode;
+wire [2:0]	mode;
 wire 		clear_request;
 wire [15:0]	data_from_user;
 
 wire [15:0] sdo;
 
-assign led = rst ? 8'b10101010 : {6'b111111,~mode};
+assign led = rst ? 8'b10101010 : {5'b111111,~mode};
 
 spi_controller dac_spi(
-	.clk(clk),	// Opal Kelly ti_clk
+	.clk(clk_counter[6]),	// Opal Kelly ti_clk
 	.rst(rst),	// Opal Kelly reset
 	.mode(mode), // Opal Kelly write bit: 2'b00 for nop, 2'b01 for write, 2'b10 for read
 	.clear_request(clear_request),		// OK clr DAC pin
 	.data_from_user(data_from_user),	// waveform_info
 
 
+	.sdo_bit(sdo_bit),		
+
+	/* Output pins*/
+	.sdo(sdo),
 
 	// .sdo(sdo),		// DAC output sdo[15:0]. Should contain read data only when read from register
 					// For non-feedback control purpose, this variable should not be affecting functionality. See Manual Page 10.
@@ -78,5 +86,14 @@ okWireIn     wi03 (.ok1(ok1),                           .ep_addr(8'h03), .ep_dat
 
 okWireOut    wo21 (.ok1(ok1), .ok2(ok2x[ 0*17 +: 17 ]), .ep_addr(8'h21), .ep_datain(sdo));
 okWireOut    wo22 (.ok1(ok1), .ok2(ok2x[ 1*17 +: 17 ]), .ep_addr(8'h22), .ep_datain({14'b0,mode}));
+
+always @ (posedge clk or posedge rst) begin
+	if(rst) begin
+		clk_counter <= 0;
+	end else begin
+		clk_counter <= clk_counter + 1;
+	end
+end
+
 
 endmodule

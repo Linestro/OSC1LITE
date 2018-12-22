@@ -177,7 +177,9 @@ classdef OSC136H < handle
             
             fprintf('Reseting system to default state\n')
 
+            this.WriteToWireIn(hex2dec('01'), 0, 16, 4);
             this.WriteToWireIn(hex2dec('00'), 0, 16, 1);
+
             this.WriteToWireIn(hex2dec('01'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('03'), 0, 16, 0);
@@ -228,6 +230,21 @@ classdef OSC136H < handle
             this.WriteToWireIn(hex2dec('02'), 0, 16, 1);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
         end    
+
+        function ec = SetControlReg(this)
+            ec = 0;
+            open = calllib('okFrontPanel', 'okFrontPanel_IsOpen', this.dev);
+            if ~open
+                fprintf('Failed to Set Control Register\n')
+                ec = -1;
+                return
+            end
+            fprintf('Setting Control Register\n')
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
+            this.WriteToWireIn(hex2dec('01'), 0, 16, 3);
+            this.WriteToWireIn(hex2dec('03'), 0, 16, bin2dec('0001000000000110'));
+        end    
+
     end
 end
 
