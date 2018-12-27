@@ -201,6 +201,8 @@ classdef OSC136H < handle
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
+
+            this.SetNoop();
         end
 
         function ec = EnableRead(this)
@@ -215,6 +217,8 @@ classdef OSC136H < handle
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 2);
+
+            this.SetNoop();
         end
 
         function ec = EnableClear(this)
@@ -229,6 +233,8 @@ classdef OSC136H < handle
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 1);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
+
+            this.SetNoop();
         end    
 
         function ec = SetControlReg(this)
@@ -241,8 +247,15 @@ classdef OSC136H < handle
             end
             fprintf('Setting Control Register\n')
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
-            this.WriteToWireIn(hex2dec('01'), 0, 16, 3);
+            this.WriteToWireIn(hex2dec('01'), 0, 16, 5);
             this.WriteToWireIn(hex2dec('03'), 0, 16, bin2dec('0001000000000110'));
+            this.WriteToWireIn(hex2dec('01'), 0, 16, 3);
+
+            this.SetNoop();
+        end    
+
+        function SetNoop(this)
+            this.WriteToWireIn(hex2dec('01'), 0, 16, 0);
         end    
 
     end
