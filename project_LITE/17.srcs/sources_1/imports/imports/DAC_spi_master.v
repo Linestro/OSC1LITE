@@ -36,19 +36,23 @@ assign shift_counter_helper = ~counter + 5'd24;  // (0 -> 23, 1 -> 22, etc.)
 
 assign clear = clear_request; 								// assign OK clr DAC pin control to clr DAC register. 
 assign sclk = clk;											// assign spi input clk equal to Opal Kelly ti_clk
-assign address_byte = (mode == 3'b001) ? 8'b00000001 		// See Manual Page 32, 33
-		    : (mode == 3'b010) ? 8'b00000010 
-		    : (mode == 3'b011) ? 8'b01010101 
-		    : (mode == 3'b100) ? 8'b01010110
-		    : (mode == 3'b101) ? 8'b01010111 
+assign address_byte = (mode == 3'b001) ? 8'b00000001 		// wirte (See Manual Page 32, 33)
+		    : (mode == 3'b010) ? 8'b00000010                // read
+		    : (mode == 3'b011) ? 8'b01010101                // write control
+		    : (mode == 3'b100) ? 8'b01010110                // write reset
+		    : (mode == 3'b101) ? 8'b01010111                // write config
+		    : (mode == 3'b110) ? 8'b01011000                // write DAC gain calibration
+            : (mode == 3'b111) ? 8'b01011001                // write DAC zero calibration
 		    : 8'b0;			
 															
-assign full_command = (mode == 3'b010) ?  {address_byte, 16'b0000000000001011} // if read, set read DAC config register
+assign full_command = (mode == 3'b010) ?  {address_byte, 16'b0000000000000010} // if read, set read DAC config register
 					: (mode == 3'b100) ?  {address_byte, 16'b0000000000000001} // if reset, set RST bit to 1
+					: (mode == 3'b011) ?  {address_byte, 16'b0001000000000110} // if set control
 					: (mode == 3'b101) ?  {address_byte, 16'b0000000000000000} // if config, set WD bits to 0
+					: (mode == 3'b000) ?  {address_byte, 16'b0000000000000000}
 					: {address_byte, data_from_user};			// if write or NOP, {address_byte -> [23:16], data_from_user -> [15:0]}
 
-always @ (posedge clk or posedge rst) begin
+always @ (negedge clk or negedge rst) begin
 	if(rst) begin
 		counter <= 0;
 		raw_sdo	<= 0;
@@ -58,30 +62,35 @@ always @ (posedge clk or posedge rst) begin
 	end
 end
 
-//always @ (posedge latch) begin
-//	if(rst) begin
-//		sdo   <= 0;
-//	end else begin
-//		sdo	  <= {1'b0, raw_sdo[14:0]};
-//	end
-//end
+
+always @ (negedge clk) begin
+	if(counter >= 5'd23) begin
+        if(counter < 5'd29) begin
+            latch <= 1'b1;
+        end else begin
+            latch <= 1'b0;
+        end
+    end else begin
+        latch <= 1'b0;
+    end
+end
 
 always @ (*) begin
 
 	if(counter >= 5'd23) begin
 		if(counter < 5'd24) begin
-			latch = 1'b1;
+//			latch = 1'b1;
 			din = (full_command >> shift_counter_helper) & 1'b1;
-			sdo = {1'b0, raw_sdo[14:0]};
+			sdo = raw_sdo;
 		end else if(counter < 5'd29) begin
-			latch = 1'b1;
+//			latch = 1'b1;
 			din = 1'b0;
 		end else begin
-			latch = 1'b0;
+//			latch = 1'b0;
 			din = 1'b0;
 		end
 	end else begin
-		latch = 1'b0;
+//		latch = 1'b0;
 		din = (full_command >> shift_counter_helper) & 1'b1;
 	end
 end

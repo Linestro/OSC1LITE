@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Thu Dec 27 11:35:28 2018
+| Date         : Fri Dec 28 21:26:24 2018
 | Host         : EECS-TOYODA running 64-bit major release  (build 9200)
 | Command      : report_utilization -file OSC1_LITE_Control_utilization_synth.rpt -pb OSC1_LITE_Control_utilization_synth.pb
 | Design       : OSC1_LITE_Control
@@ -30,14 +30,14 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  654 |     0 |     10400 |  6.29 |
-|   LUT as Logic             |  622 |     0 |     10400 |  5.98 |
+| Slice LUTs*                |  655 |     0 |     10400 |  6.30 |
+|   LUT as Logic             |  623 |     0 |     10400 |  5.99 |
 |   LUT as Memory            |   32 |     0 |      9600 |  0.33 |
 |     LUT as Distributed RAM |   32 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  629 |    48 |     20800 |  3.02 |
-|   Register as Flip Flop    |  614 |    48 |     20800 |  2.95 |
-|   Register as Latch        |   15 |     0 |     20800 |  0.07 |
+| Slice Registers            |  633 |    48 |     20800 |  3.04 |
+|   Register as Flip Flop    |  617 |    48 |     20800 |  2.97 |
+|   Register as Latch        |   16 |     0 |     20800 |  0.08 |
 | F7 Muxes                   |   16 |     0 |     16300 |  0.10 |
 | F8 Muxes                   |    4 |     0 |      8150 |  0.05 |
 +----------------------------+------+-------+-----------+-------+
@@ -57,9 +57,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 44    |          Yes |           - |          Set |
-| 170   |          Yes |           - |        Reset |
+| 172   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 415   |          Yes |       Reset |            - |
+| 417   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,10 +149,10 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       |  415 |        Flop & Latch |
+| FDRE       |  417 |        Flop & Latch |
 | LUT6       |  323 |                 LUT |
-| FDCE       |  155 |        Flop & Latch |
-| LUT5       |  127 |                 LUT |
+| FDCE       |  156 |        Flop & Latch |
+| LUT5       |  128 |                 LUT |
 | LUT4       |  118 |                 LUT |
 | LUT3       |   58 |                 LUT |
 | LUT2       |   55 |                 LUT |
@@ -164,8 +164,8 @@ Table of Contents
 | OBUFT      |   17 |                  IO |
 | RAMS64E    |   16 |  Distributed Memory |
 | MUXF7      |   16 |               MuxFx |
+| LDCE       |   16 |        Flop & Latch |
 | OBUF       |   15 |                  IO |
-| LDCE       |   15 |        Flop & Latch |
 | RAMS32     |    8 |  Distributed Memory |
 | MUXF8      |    4 |               MuxFx |
 | BUFG       |    3 |               Clock |

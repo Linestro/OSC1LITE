@@ -178,6 +178,7 @@ classdef OSC136H < handle
             fprintf('Reseting system to default state\n')
 
             this.WriteToWireIn(hex2dec('01'), 0, 16, 4);
+            pause(0.1);
             this.WriteToWireIn(hex2dec('00'), 0, 16, 1);
 
             this.WriteToWireIn(hex2dec('01'), 0, 16, 0);
@@ -199,7 +200,7 @@ classdef OSC136H < handle
             this.WriteToWireIn(hex2dec('03'), 0, 16, value);	% Update the value first to avoid potential data loss
             this.WriteToWireIn(hex2dec('00'), 0, 16, 1);		
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
-            this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
+            pause(0.1);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
 
             this.SetNoop();
@@ -214,11 +215,14 @@ classdef OSC136H < handle
                 return
             end
             fprintf('Reading from the register\n')
+            % this.WriteToWireIn(hex2dec('03'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
+            pause(0.1);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
+            pause(0.1);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 2);
 
-            this.SetNoop();
+            %this.SetNoop();
         end
 
         function ec = EnableClear(this)
@@ -230,8 +234,10 @@ classdef OSC136H < handle
                 return
             end
             fprintf('Clearing the register\n')
+            % this.WriteToWireIn(hex2dec('03'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 1);
+            pause(0.1);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
 
             this.SetNoop();
@@ -246,15 +252,19 @@ classdef OSC136H < handle
                 return
             end
             fprintf('Setting Control Register\n')
+            % this.WriteToWireIn(hex2dec('03'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 5);
-            this.WriteToWireIn(hex2dec('03'), 0, 16, bin2dec('0001000000000110'));
+            pause(0.1);
+            % this.WriteToWireIn(hex2dec('03'), 0, 16, bin2dec('0001000000000110'));
             this.WriteToWireIn(hex2dec('01'), 0, 16, 3);
+            pause(0.1);
 
-            this.SetNoop();
+            % this.SetNoop();
         end    
 
         function SetNoop(this)
+        	pause(0.1);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 0);
         end    
 

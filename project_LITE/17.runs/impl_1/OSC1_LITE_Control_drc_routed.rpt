@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Thu Dec 27 11:36:24 2018
+| Date         : Fri Dec 28 21:27:20 2018
 | Host         : EECS-TOYODA running 64-bit major release  (build 9200)
 | Command      : report_drc -file OSC1_LITE_Control_drc_routed.rpt -pb OSC1_LITE_Control_drc_routed.pb -rpx OSC1_LITE_Control_drc_routed.rpx
 | Design       : OSC1_LITE_Control
@@ -57,12 +57,12 @@ Related violations: <none>
 
 IOSR-1#1 Warning
 IOB set reset sharing  
-IO sdo_bit connects to flops which have these wi00/ep_dataout[0], okHI/core0/core0/lfc9af733ef9b7e7ec2ccb35c062a12d3[25] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO sdo_bit connects to flops which have these okHI/core0/core0/lfc9af733ef9b7e7ec2ccb35c062a12d3[25], wi00/ep_dataout[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net dac_spi/sdo_reg[14]_i_1_n_0 is a gated clock net sourced by a combinational pin dac_spi/sdo_reg[14]_i_1/O, cell dac_spi/sdo_reg[14]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net dac_spi/sdo_reg[15]_i_1_n_0 is a gated clock net sourced by a combinational pin dac_spi/sdo_reg[15]_i_1/O, cell dac_spi/sdo_reg[15]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 REQP-1840#1 Warning
