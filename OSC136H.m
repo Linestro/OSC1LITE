@@ -158,10 +158,12 @@ classdef OSC136H < handle
                 ec = -1;
                 return
             end
+            fprintf('Successfully opened board\n')
+
             this.Configure('OSC1_LITE_Control.bit');
             this.SysReset();
-            fprintf('Successfully opened board\n')
-            ec = 0;
+            pause(0.1);
+            ec = this.SetControlReg();
         end
         
 
@@ -202,7 +204,7 @@ classdef OSC136H < handle
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
             pause(0.1);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
-
+            pause(0.1);
             this.SetNoop();
         end
 
@@ -215,14 +217,11 @@ classdef OSC136H < handle
                 return
             end
             fprintf('Reading from the register\n')
-            % this.WriteToWireIn(hex2dec('03'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
             pause(0.1);
-            this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
-            pause(0.1);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 2);
-
-            %this.SetNoop();
+            pause(0.1);
+            this.SetNoop();
         end
 
         function ec = EnableClear(this)
@@ -234,12 +233,10 @@ classdef OSC136H < handle
                 return
             end
             fprintf('Clearing the register\n')
-            % this.WriteToWireIn(hex2dec('03'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 1);
             pause(0.1);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
-
             this.SetNoop();
         end    
 
@@ -252,21 +249,102 @@ classdef OSC136H < handle
                 return
             end
             fprintf('Setting Control Register\n')
-            % this.WriteToWireIn(hex2dec('03'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 5);
             pause(0.1);
-            % this.WriteToWireIn(hex2dec('03'), 0, 16, bin2dec('0001000000000110'));
             this.WriteToWireIn(hex2dec('01'), 0, 16, 3);
             pause(0.1);
-
-            % this.SetNoop();
+            this.SetNoop();
         end    
 
         function SetNoop(this)
         	pause(0.1);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 0);
+        end
+
+
+        function tlines = SavePipeFromFile(this, filename)
+            fprintf('Saving pipe data from %s\n', filename)
+            fd = fopen(filename, 'r');
+            if fd == -1
+               fprintf('Error opening pipe data file.\n');
+               return
+            end
+            tline = fgetl(fd);
+            tlines = cell(0,1);
+            while ischar(tline)
+                tlines{end+1,1} = str2num(tline);
+                tline = fgetl(fd);
+            end
+            tlines = cell2mat(tlines);
+            fclose(fd);
         end    
+
+        function ec = TriggerPipe(this, num_of_pulses, cont)
+            ec = -1;
+            if ~this.isOpen()
+                fprintf('Board not open\n')
+                return
+            end
+            [txtfile, path] = uigetfile('*.cwave', 'Select the .cwave file');
+            if ~isequal(txtfile, 0)
+                try
+                pipe_data = this.SavePipeFromFile(strcat(path, txtfile));
+                catch
+                   errordlg('File error.', 'Type Error');
+                end
+            end
+
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 1);
+            pause(0.1);
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
+
+            this.WriteToWireIn(hex2dec('15'), 0, 16, numel(pipe_data));
+            if cont == 0
+            	this.WriteToWireIn(hex2dec('16'), 0, 16, num_of_pulses);
+            else
+            	this.WriteToWireIn(hex2dec('16'), 0, 16, 65535);
+            end
+            
+            SIZE = numel(pipe_data);
+            if (SIZE <= 1 || SIZE > 32768)
+                errordlg('Error: Invalid pipe data size. Valid size is [2, 32768]. Aborted.', 'Type Error');
+                return
+            end
+            
+            data_out(2 * SIZE, 1) = uint8(0);
+            for i = 1:SIZE
+                if pipe_data(i) > 1023
+                    pipe_data(i) = 1023;
+                end
+                if pipe_data(i) < 0
+                    pipe_data(i) = 0;
+                end
+                data_out(2 * i - 1) = uint8(floor(pipe_data(i) / 256)); 
+                data_out(2 * i) = uint8(mod(pipe_data(i), 256)); 
+            end
+
+            calllib('okFrontPanel', 'okFrontPanel_WriteToPipeIn', this.dev, hex2dec('80'), 2 * SIZE, data_out);
+
+            % this.UpdateChannelPipeWf(headstage, chan, 1);
+
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 2);
+            pause(0.1);
+            this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
+
+            persistent buf pv;
+            buf(2 * SIZE, 1) = uint8(0);
+            pv = libpointer('uint8Ptr', buf);
+            calllib('okFrontPanel', 'okFrontPanel_ReadFromPipeOut', this.dev, hex2dec('A0'), 2 * SIZE, pv);
+
+%         epvalue = get(pv, 'Value');
+%         pipe_out_data = zeros(SIZE, 1);
+%         for i = 1:SIZE
+%             pipe_out_data(i) = uint16(epvalue(2 * i - 1))* 256 + uint16(epvalue(2 * i));
+%             fprintf('Read %d \n',   pipe_out_data(i));
+%         end
+            ec = 0;
+        end
 
     end
 end

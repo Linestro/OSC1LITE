@@ -21,7 +21,9 @@ module spi_controller(
 	output wire			      clear,	// DAC input clr
 	output reg			      latch,	// DAC input latch
 	output wire			      sclk,		// DAC input sclk
-	output reg			      din		// DAC input din
+	output reg			      din,		// DAC input din
+
+	output wire               spi_pipe_clk
     );
 
 wire [7:0] 	address_byte;
@@ -50,7 +52,9 @@ assign full_command = (mode == 3'b010) ?  {address_byte, 16'b0000000000000010} /
 					: (mode == 3'b011) ?  {address_byte, 16'b0001000000000110} // if set control
 					: (mode == 3'b101) ?  {address_byte, 16'b0000000000000000} // if config, set WD bits to 0
 					: (mode == 3'b000) ?  {address_byte, 16'b0000000000000000}
-					: {address_byte, data_from_user};			// if write or NOP, {address_byte -> [23:16], data_from_user -> [15:0]}
+					: {address_byte, data_from_user};			// if write, {address_byte -> [23:16], data_from_user -> [15:0]}
+
+assign spi_pipe_clk = (counter == 5'd29);
 
 always @ (negedge clk or negedge rst) begin
 	if(rst) begin
@@ -79,18 +83,14 @@ always @ (*) begin
 
 	if(counter >= 5'd23) begin
 		if(counter < 5'd24) begin
-//			latch = 1'b1;
 			din = (full_command >> shift_counter_helper) & 1'b1;
 			sdo = raw_sdo;
 		end else if(counter < 5'd29) begin
-//			latch = 1'b1;
 			din = 1'b0;
 		end else begin
-//			latch = 1'b0;
 			din = 1'b0;
 		end
 	end else begin
-//		latch = 1'b0;
 		din = (full_command >> shift_counter_helper) & 1'b1;
 	end
 end
