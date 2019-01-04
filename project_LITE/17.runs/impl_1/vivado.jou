@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Dec 28 21:26:31 2018
-# Process ID: 22076
+# Start of session at: Fri Jan  4 13:02:05 2019
+# Process ID: 62612
 # Current directory: C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/impl_1
 # Command line: vivado.exe -log OSC1_LITE_Control.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source OSC1_LITE_Control.tcl -notrace
 # Log file: C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/impl_1/OSC1_LITE_Control.vdi

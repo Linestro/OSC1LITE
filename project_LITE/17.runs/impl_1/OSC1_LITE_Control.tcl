@@ -54,7 +54,10 @@ set rc [catch {
   set_property parent.project_path C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.xpr [current_project]
   set_property ip_output_repo C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   add_files -quiet C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/synth_1/OSC1_LITE_Control.dcp
+  read_ip -quiet c:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  set_property is_locked true [get_files c:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
   read_xdc C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/constrs_1/imports/Desktop/xem7001.xdc
   link_design -top OSC1_LITE_Control -part xc7a15tftg256-1
   close_msg_db -file init_design.pb
@@ -131,6 +134,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   catch { write_mem_info -force OSC1_LITE_Control.mmi }
   write_bitstream -force OSC1_LITE_Control.bit 
   catch {write_debug_probes -no_partial_ltxfile -quiet -force debug_nets}

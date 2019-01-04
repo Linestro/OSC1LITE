@@ -314,8 +314,9 @@ classdef OSC136H < handle
             
             data_out(2 * SIZE, 1) = uint8(0);
             for i = 1:SIZE
-                if pipe_data(i) > 1023
-                    pipe_data(i) = 1023;
+                fprintf('Read %d \n',   pipe_data(i));
+                if pipe_data(i) > 2^17
+                    pipe_data(i) = 2^17 - 1;
                 end
                 if pipe_data(i) < 0
                     pipe_data(i) = 0;
@@ -324,10 +325,9 @@ classdef OSC136H < handle
                 data_out(2 * i) = uint8(mod(pipe_data(i), 256)); 
             end
 
-            calllib('okFrontPanel', 'okFrontPanel_WriteToPipeIn', this.dev, hex2dec('80'), 2 * SIZE, data_out);
-
-            % this.UpdateChannelPipeWf(headstage, chan, 1);
-
+            success_ret = calllib('okFrontPanel', 'okFrontPanel_WriteToPipeIn', this.dev, hex2dec('80'), 2 * SIZE, data_out);
+            fprintf('Success %d \n',   success_ret);
+            
             this.WriteToWireIn(hex2dec('00'), 0, 16, 2);
             pause(0.1);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
@@ -335,14 +335,15 @@ classdef OSC136H < handle
             persistent buf pv;
             buf(2 * SIZE, 1) = uint8(0);
             pv = libpointer('uint8Ptr', buf);
-            calllib('okFrontPanel', 'okFrontPanel_ReadFromPipeOut', this.dev, hex2dec('A0'), 2 * SIZE, pv);
-
-%         epvalue = get(pv, 'Value');
-%         pipe_out_data = zeros(SIZE, 1);
-%         for i = 1:SIZE
-%             pipe_out_data(i) = uint16(epvalue(2 * i - 1))* 256 + uint16(epvalue(2 * i));
-%             fprintf('Read %d \n',   pipe_out_data(i));
-%         end
+            success_ret = calllib('okFrontPanel', 'okFrontPanel_ReadFromPipeOut', this.dev, hex2dec('A0'), 2 * SIZE, pv);
+            fprintf('Success %d \n',   success_ret);
+            
+        epvalue = get(pv, 'Value');
+        pipe_out_data = zeros(SIZE, 1);
+        for i = 1:SIZE
+            pipe_out_data(i) = uint16(epvalue(2 * i - 1))* 256 + uint16(epvalue(2 * i));
+            fprintf('Read %d \n',   pipe_out_data(i));
+        end
             ec = 0;
         end
 

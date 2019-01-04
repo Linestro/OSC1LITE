@@ -36,7 +36,6 @@ wire [14:0]  sys_ctrl_pad3;
 reg [6:0] 	 clk_counter;
 
 
-assign hi_muxsel = 1'b0;
 
 //input wire 		sdo_bit;
 wire 		rst;
@@ -49,8 +48,22 @@ wire [15:0] current_to_dac_chip;
 
 wire [15:0] sdo;
 
+
+
+wire pipe_in_write_enable;
+wire pipe_out_read_enable;
+
+wire [15:0]  pipe_in_write_data;
+wire [15:0]  pipe_out_read_data;
+
+wire [15:0]  period;
+wire [15:0]  num_of_pulses;
+
+wire		 spi_pipe_clk;
+
+assign hi_muxsel = 1'b0;
 assign current_to_dac_chip = pipe ? {pipe_out_read_data[1:0],pipe_out_read_data[15:8]} : data_from_user;
-assign led = rst ? 8'b10101010 : {5'b111111,~mode};
+assign led = rst ? 8'b10101010 : {5'b11111,~mode};
 
 spi_controller dac_spi(
 	.clk(clk_counter[6]),	// Opal Kelly ti_clk
@@ -78,17 +91,6 @@ spi_controller dac_spi(
     );
 
 
-
-wire pipe_in_write_enable;
-wire pipe_out_read_enable;
-
-wire [15:0]  pipe_in_write_data;
-wire [15:0]  pipe_out_read_data;
-
-wire [15:0]  period;
-wire [15:0]  num_of_pulses;
-
-wire		 spi_pipe_clk;
 
 
 amp_pipe my_amp_pipe(
@@ -122,7 +124,7 @@ okWireIn     wi15 (.ok1(ok1),                           .ep_addr(8'h15), .ep_dat
 okWireIn     wi16 (.ok1(ok1),                           .ep_addr(8'h16), .ep_dataout(num_of_pulses[15:0]));
 
 okWireOut    wo21 (.ok1(ok1), .ok2(ok2x[ 0*17 +: 17 ]), .ep_addr(8'h21), .ep_datain(sdo));
-okWireOut    wo22 (.ok1(ok1), .ok2(ok2x[ 1*17 +: 17 ]), .ep_addr(8'h22), .ep_datain({15'b0,sdo_bit}));
+okWireOut    wo22 (.ok1(ok1), .ok2(ok2x[ 1*17 +: 17 ]), .ep_addr(8'h22), .ep_datain({15'b0,pipe}));
 
 okPipeIn	pi80 ( .ok1(ok1), .ok2(ok2x[ 2*17 +: 17 ]), .ep_addr(8'h80), .ep_write(pipe_in_write_enable), .ep_dataout(pipe_in_write_data));
 okPipeOut 	poa0 ( .ok1(ok1), .ok2(ok2x[ 3*17 +: 17 ]), .ep_addr(8'hA0), .ep_read(pipe_out_read_enable), .ep_datain(pipe_out_read_data));

@@ -7,20 +7,29 @@ create_project -in_memory -part xc7a15tftg256-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
+set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.cache/wt [current_project]
 set_property parent.project_path C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.xpr [current_project]
+set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v
+  C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/amp_pipe.v
   {C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okCoreHarness.v}
   {C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okLibrary.v}
+  {C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okPipeIn.v}
+  {C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okPipeOut.v}
   {C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okWireIn.v}
   {C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okWireOut.v}
   C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v
 }
+read_ip -quiet c:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+set_property is_locked true [get_files c:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be

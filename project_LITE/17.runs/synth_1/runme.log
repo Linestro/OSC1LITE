@@ -14,653 +14,689 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a15t-ftg256'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a15t-ftg256'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 32356 
-WARNING: [Synth 8-2292] literal value truncated to fit in 5 bits [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:49]
+INFO: Helper process launched with PID 70780 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 358.254 ; gain = 89.324
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 363.371 ; gain = 78.074
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'OSC1_LITE_Control' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:4]
 INFO: [Synth 8-638] synthesizing module 'spi_controller' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:7]
 INFO: [Synth 8-256] done synthesizing module 'spi_controller' (1#1) [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:7]
+INFO: [Synth 8-638] synthesizing module 'amp_pipe' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/amp_pipe.v:2]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/synth_1/.Xil/Vivado-71232-EECS-TOYODA/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (2#1) [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/synth_1/.Xil/Vivado-71232-EECS-TOYODA/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-226] default block is never used [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/amp_pipe.v:93]
+INFO: [Synth 8-226] default block is never used [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/amp_pipe.v:119]
+INFO: [Synth 8-256] done synthesizing module 'amp_pipe' (3#1) [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/amp_pipe.v:2]
 INFO: [Synth 8-638] synthesizing module 'okHost' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okLibrary.v:13]
 INFO: [Synth 8-638] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:17657]
-INFO: [Synth 8-256] done synthesizing module 'IOBUF' (2#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:17657]
+INFO: [Synth 8-256] done synthesizing module 'IOBUF' (4#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:17657]
 INFO: [Synth 8-638] synthesizing module 'FDRE' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3964]
-INFO: [Synth 8-256] done synthesizing module 'FDRE' (3#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3964]
+INFO: [Synth 8-256] done synthesizing module 'FDRE' (5#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3964]
 INFO: [Synth 8-638] synthesizing module 'IBUFG' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14894]
-INFO: [Synth 8-256] done synthesizing module 'IBUFG' (4#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14894]
+INFO: [Synth 8-256] done synthesizing module 'IBUFG' (6#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14894]
 INFO: [Synth 8-638] synthesizing module 'MMCME2_BASE' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20879]
-INFO: [Synth 8-256] done synthesizing module 'MMCME2_BASE' (5#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20879]
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_BASE' (7#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20879]
 WARNING: [Synth 8-350] instance 'mmcm0' of module 'MMCME2_BASE' requires 18 connections, but only 6 given [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okLibrary.v:56]
 INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-256] done synthesizing module 'BUFG' (6#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (8#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
 INFO: [Synth 8-638] synthesizing module 'OBUF' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:22272]
-INFO: [Synth 8-256] done synthesizing module 'OBUF' (7#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:22272]
+INFO: [Synth 8-256] done synthesizing module 'OBUF' (9#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:22272]
 INFO: [Synth 8-638] synthesizing module 'LUT6' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6' (8#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6' (10#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized0' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized0' (8#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized0' (10#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized1' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized1' (8#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized1' (10#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT2' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
-INFO: [Synth 8-256] done synthesizing module 'LUT2' (9#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
+INFO: [Synth 8-256] done synthesizing module 'LUT2' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
 INFO: [Synth 8-638] synthesizing module 'LUT4' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4' (10#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4' (12#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized0' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized0' (10#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized0' (12#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized2' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized2' (10#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized2' (12#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized3' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized3' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized3' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized4' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized4' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized4' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized5' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized5' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized5' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized6' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized6' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized6' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized0' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
-INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized0' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized0' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized1' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized1' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized1' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized0' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized0' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized0' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized7' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized7' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized7' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized8' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized8' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized8' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized1' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized1' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized1' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized2' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized2' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized2' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized3' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized3' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized3' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized9' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized9' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized9' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized2' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized2' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized2' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized4' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized4' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized4' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized10' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized10' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized10' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized11' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized11' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized11' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized12' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized12' (11#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized12' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT3' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3' (12#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3' (14#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized13' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized13' (12#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized13' (14#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized3' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized3' (12#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized3' (14#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized0' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized0' (12#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized0' (14#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized5' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized5' (12#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized5' (14#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized14' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized14' (12#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized14' (14#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized4' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized4' (12#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized4' (14#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized15' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized15' (12#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized15' (14#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'GND' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:4942]
-INFO: [Synth 8-256] done synthesizing module 'GND' (13#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:4942]
+INFO: [Synth 8-256] done synthesizing module 'GND' (15#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:4942]
 INFO: [Synth 8-638] synthesizing module 'VCC' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:45038]
-INFO: [Synth 8-256] done synthesizing module 'VCC' (14#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:45038]
+INFO: [Synth 8-256] done synthesizing module 'VCC' (16#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:45038]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized16' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized16' (14#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized16' (16#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized17' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized17' (14#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized17' (16#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized5' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized5' (14#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized5' (16#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized18' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized18' (14#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized18' (16#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized19' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized19' (14#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized19' (16#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'CARRY4' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:961]
-INFO: [Synth 8-256] done synthesizing module 'CARRY4' (15#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:961]
+INFO: [Synth 8-256] done synthesizing module 'CARRY4' (17#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:961]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized6' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized6' (15#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized6' (17#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized1' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized1' (15#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized1' (17#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT1' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20458]
-INFO: [Synth 8-256] done synthesizing module 'LUT1' (16#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20458]
+INFO: [Synth 8-256] done synthesizing module 'LUT1' (18#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20458]
 INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized1' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
-INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized1' (16#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized1' (18#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized2' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized2' (16#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized2' (18#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized7' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized7' (16#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized7' (18#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized6' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized6' (16#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized6' (18#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized20' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized20' (16#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized20' (18#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'FDPE' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3904]
-INFO: [Synth 8-256] done synthesizing module 'FDPE' (17#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3904]
+INFO: [Synth 8-256] done synthesizing module 'FDPE' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3904]
 INFO: [Synth 8-638] synthesizing module 'FDCE' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3748]
-INFO: [Synth 8-256] done synthesizing module 'FDCE' (18#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3748]
+INFO: [Synth 8-256] done synthesizing module 'FDCE' (20#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3748]
 INFO: [Synth 8-638] synthesizing module 'RAMB18E1' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:41822]
-INFO: [Synth 8-256] done synthesizing module 'RAMB18E1' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:41822]
+INFO: [Synth 8-256] done synthesizing module 'RAMB18E1' (21#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:41822]
 INFO: [Synth 8-638] synthesizing module 'FDRE__parameterized0' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3964]
-INFO: [Synth 8-256] done synthesizing module 'FDRE__parameterized0' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3964]
+INFO: [Synth 8-256] done synthesizing module 'FDRE__parameterized0' (21#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3964]
 INFO: [Synth 8-638] synthesizing module 'FDPE__parameterized0' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3904]
-INFO: [Synth 8-256] done synthesizing module 'FDPE__parameterized0' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3904]
+INFO: [Synth 8-256] done synthesizing module 'FDPE__parameterized0' (21#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3904]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized7' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized7' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized7' (21#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized21' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized21' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized21' (21#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized22' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized22' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized22' (21#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized23' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized23' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized23' (21#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized24' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized24' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized24' (21#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized25' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized25' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized25' (21#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized26' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized26' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized26' (21#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized8' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized8' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized8' (21#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized9' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized9' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized9' (21#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized10' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized10' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized10' (21#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized27' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized27' (19#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized27' (21#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'DNA_PORT' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3032]
-INFO: [Synth 8-256] done synthesizing module 'DNA_PORT' (22#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3032]
+INFO: [Synth 8-256] done synthesizing module 'DNA_PORT' (24#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3032]
 INFO: [Synth 8-638] synthesizing module 'FDCE__parameterized0' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3748]
-INFO: [Synth 8-256] done synthesizing module 'FDCE__parameterized0' (22#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3748]
+INFO: [Synth 8-256] done synthesizing module 'FDCE__parameterized0' (24#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3748]
 INFO: [Synth 8-638] synthesizing module 'FDPE__parameterized1' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3904]
-INFO: [Synth 8-256] done synthesizing module 'FDPE__parameterized1' (22#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3904]
+INFO: [Synth 8-256] done synthesizing module 'FDPE__parameterized1' (24#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3904]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2' (23#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized28' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized28' (23#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized28' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized0' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized0' (23#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized0' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'FDRE__parameterized1' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3964]
-INFO: [Synth 8-256] done synthesizing module 'FDRE__parameterized1' (23#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3964]
+INFO: [Synth 8-256] done synthesizing module 'FDRE__parameterized1' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3964]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized29' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized29' (23#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized29' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized30' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized30' (23#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized30' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized1' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized1' (23#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized1' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized2' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized2' (23#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized2' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized3' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized3' (23#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized3' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized31' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized31' (23#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized31' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized4' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized4' (23#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized4' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized32' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized32' (23#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized32' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized5' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized5' (23#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized5' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized33' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized33' (23#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized33' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'RAM128X1S' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:36847]
-INFO: [Synth 8-256] done synthesizing module 'RAM128X1S' (24#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:36847]
+INFO: [Synth 8-256] done synthesizing module 'RAM128X1S' (26#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:36847]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized6' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized6' (24#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized6' (26#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized34' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized34' (24#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized34' (26#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized7' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized7' (24#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized7' (26#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'RAM32M' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:37094]
-INFO: [Synth 8-256] done synthesizing module 'RAM32M' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:37094]
+INFO: [Synth 8-256] done synthesizing module 'RAM32M' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:37094]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized8' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized8' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized8' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized9' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized9' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized9' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized10' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized10' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized10' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized11' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized11' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized11' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized35' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized35' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized35' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized36' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized36' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized36' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized12' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized12' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized12' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized13' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized13' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized13' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized37' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized37' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized37' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized14' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized14' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized14' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized15' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized15' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized15' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized16' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized16' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized16' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized38' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized38' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized38' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized17' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized17' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized17' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized18' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized18' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized18' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized19' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized19' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized19' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized20' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized20' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized20' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized39' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized39' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized39' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized40' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized40' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized40' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6_2__parameterized21' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
-INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized21' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
+INFO: [Synth 8-256] done synthesizing module 'LUT6_2__parameterized21' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20689]
 INFO: [Synth 8-638] synthesizing module 'RAMB18E1__parameterized0' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:41822]
-INFO: [Synth 8-256] done synthesizing module 'RAMB18E1__parameterized0' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:41822]
+INFO: [Synth 8-256] done synthesizing module 'RAMB18E1__parameterized0' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:41822]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized41' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized41' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized41' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized42' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized42' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized42' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized43' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized43' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized43' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized44' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized44' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized44' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized45' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized45' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized45' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized46' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized46' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized46' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized47' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized47' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized47' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized48' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized48' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized48' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized49' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized49' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized49' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized8' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized8' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized8' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized9' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized9' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized9' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized50' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized50' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized50' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized51' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized51' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized51' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized10' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized10' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized10' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized52' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized52' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized52' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized11' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized11' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized11' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized53' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized53' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized53' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized54' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized54' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized54' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized55' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized55' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized55' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized56' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized56' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized56' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized57' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized57' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized57' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized58' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized58' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized58' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized59' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized59' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized59' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized60' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized60' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized60' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized61' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized61' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized61' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized62' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized62' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized62' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized63' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized63' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized63' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized64' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized64' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized64' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized65' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized65' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized65' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized66' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized66' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized66' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized67' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized67' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized67' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized68' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized68' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized68' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized69' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized69' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized69' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized70' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized70' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized70' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized71' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized71' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized71' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized72' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized72' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized72' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized73' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized73' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized73' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized74' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized74' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized74' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized75' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized75' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized75' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized76' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized76' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized76' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized77' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized77' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized77' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized78' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized78' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized78' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized79' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized79' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized79' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized80' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized80' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized80' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized81' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized81' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized81' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized82' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized82' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized82' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized83' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized83' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized83' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized84' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized84' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized84' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized85' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized85' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized85' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized12' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized12' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized12' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized86' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized86' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized86' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized13' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized13' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized13' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized87' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized87' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized87' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized14' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized14' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized14' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized15' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized15' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized15' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized88' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized88' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized88' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized89' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized89' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized89' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized90' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized90' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized90' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized91' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized91' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized91' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized92' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized92' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized92' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized93' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized93' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized93' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized94' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized94' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized94' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized95' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized95' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized95' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized96' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized96' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized96' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized97' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized97' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized97' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized98' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized98' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized98' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized99' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized99' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized99' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized100' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized100' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized100' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized101' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized101' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized101' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized102' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized102' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized102' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized103' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized103' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized103' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized104' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized104' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized104' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized105' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized105' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized105' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized106' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized106' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized106' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized107' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized107' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized107' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized108' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized108' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized108' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized109' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized109' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized109' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized110' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized110' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized110' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized111' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized111' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized111' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized112' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized112' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized112' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized11' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized11' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized11' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized16' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized16' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized16' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized3' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized3' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized3' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized2' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
-INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized2' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized2' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized113' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized113' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized113' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized114' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized114' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized114' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized12' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized12' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized12' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized115' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized115' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized115' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized4' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized4' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized4' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized17' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized17' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized17' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized116' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized116' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized116' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized18' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized18' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized18' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized13' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized13' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized13' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized117' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized117' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized117' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized19' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized19' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized19' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized118' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized118' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized118' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized14' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized14' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized14' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized20' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized20' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized20' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized15' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized15' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized15' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized21' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized21' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized21' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized119' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized119' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized119' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized120' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized120' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized120' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized121' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized121' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized121' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized3' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
-INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized3' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized3' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized122' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized122' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized122' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized16' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized16' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized16' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized22' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized22' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized22' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized123' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized123' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized123' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized124' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized124' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized124' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized23' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized23' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized23' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized125' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized125' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized125' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized126' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized126' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized126' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized127' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized127' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized127' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized128' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized128' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized128' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized129' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized129' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized129' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized17' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized17' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized17' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized24' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized24' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized24' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized130' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized130' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized130' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized131' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized131' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized131' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized4' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
-INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized4' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized4' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized132' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized132' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized132' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized133' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized133' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized133' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized18' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized18' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized18' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized19' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized19' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized19' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized134' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized134' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized134' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized25' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized25' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized25' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized135' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized135' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized135' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized136' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized136' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized136' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized137' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized137' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized137' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized138' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized138' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized138' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized139' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized139' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized139' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized20' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized20' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized20' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized140' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized140' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized140' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized141' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized141' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized141' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized142' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized142' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized142' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized21' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized21' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized21' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized5' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized5' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized5' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized143' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized143' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized143' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized144' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized144' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized144' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized22' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized22' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized22' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized26' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized26' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized26' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized27' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized27' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized27' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized23' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized23' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized23' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized28' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized28' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized28' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized24' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized24' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized24' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized25' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized25' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized25' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized145' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized145' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized145' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized146' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized146' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized146' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized5' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
-INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized5' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized5' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized147' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized147' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized147' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized148' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized148' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized148' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized149' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized149' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized149' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized6' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized6' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized6' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized29' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized29' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized29' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized150' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized150' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized150' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized26' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized26' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized26' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized30' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized30' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized30' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized151' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized151' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized151' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized152' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized152' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized152' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized153' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized153' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized153' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized154' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized154' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized154' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized155' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized155' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized155' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized7' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized7' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized7' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized6' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
-INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized6' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized6' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20492]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized8' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized8' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized8' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized9' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized9' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized9' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized31' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized31' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized31' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized156' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized156' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized156' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized32' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized32' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized32' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized27' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized27' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized27' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized10' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized10' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized10' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized157' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized157' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized157' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized158' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized158' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized158' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized11' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized11' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized11' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized12' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized12' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized12' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized33' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized33' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized33' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized159' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized159' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized159' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized160' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized160' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized160' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized13' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized13' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized13' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized14' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized14' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized14' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized15' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized15' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized15' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized161' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized161' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized161' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized34' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized34' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized34' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized16' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized16' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized16' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized162' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized162' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized162' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized163' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized163' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized163' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized164' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized164' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized164' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized165' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized165' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized165' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized166' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized166' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized166' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized167' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized167' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized167' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized28' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized28' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized28' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized168' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized168' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized168' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized169' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized169' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized169' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized35' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized35' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized35' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized17' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
-INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized17' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized17' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20530]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized29' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized29' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized29' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized36' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized36' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized36' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized170' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized170' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized170' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized171' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized171' (25#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'okHost' (28#1) [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okLibrary.v:13]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized171' (27#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'okHost' (30#1) [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okLibrary.v:13]
 INFO: [Synth 8-638] synthesizing module 'okWireOR' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okLibrary.v:118]
-INFO: [Synth 8-256] done synthesizing module 'okWireOR' (29#1) [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okLibrary.v:118]
+INFO: [Synth 8-256] done synthesizing module 'okWireOR' (31#1) [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okLibrary.v:118]
+WARNING: [Synth 8-689] width (68) of port connection 'ok2s' does not match port width (34) of module 'okWireOR' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:117]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized30' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized30' (29#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:87]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:88]
-INFO: [Synth 8-256] done synthesizing module 'OSC1_LITE_Control' (32#1) [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:4]
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized30' (31#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:126]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:127]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized37' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized37' (33#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized172' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized172' (33#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'OSC1_LITE_Control' (36#1) [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:4]
 WARNING: [Synth 8-3917] design OSC1_LITE_Control has port hi_muxsel driven by constant 0
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[30]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[29]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[28]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[27]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[25]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[24]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[15]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[14]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[13]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[12]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[11]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[10]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[9]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[8]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[7]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[6]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[5]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[4]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[3]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[2]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[1]
+WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[0]
+WARNING: [Synth 8-3331] design okPipeIn has unconnected port ok1[30]
+WARNING: [Synth 8-3331] design okPipeIn has unconnected port ok1[29]
+WARNING: [Synth 8-3331] design okPipeIn has unconnected port ok1[28]
+WARNING: [Synth 8-3331] design okPipeIn has unconnected port ok1[26]
 WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[30]
 WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[29]
 WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[27]
@@ -735,35 +771,9 @@ WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port m_acl
 WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_aclk
 WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_aresetn
 WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port m_aclk_en
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_aclk_en
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awid[0]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[31]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[30]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[29]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[28]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[27]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[26]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[25]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[24]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[23]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[22]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[21]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[20]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[19]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[18]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[17]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[16]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[15]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[14]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[13]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[12]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[11]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[10]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[9]
-WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[8]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 397.078 ; gain = 128.148
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 411.465 ; gain = 126.168
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -773,7 +783,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 397.078 ; gain = 128.148
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 411.465 ; gain = 126.168
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 109 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -782,6 +792,8 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/synth_1/.Xil/Vivado-71232-EECS-TOYODA/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'my_amp_pipe/memory'
+Finished Parsing XDC File [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/synth_1/.Xil/Vivado-71232-EECS-TOYODA/dcp3/blk_mem_gen_0_in_context.xdc] for cell 'my_amp_pipe/memory'
 Parsing XDC File [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/constrs_1/imports/Desktop/xem7001.xdc]
 WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/constrs_1/imports/Desktop/xem7001.xdc:27]
 WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/constrs_1/imports/Desktop/xem7001.xdc:27]
@@ -808,28 +820,30 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM128X1S => RAM128X1S (RAMS64E, RAMS64E, MUXF7): 8 instances
   RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 696.035 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 709.418 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a15tftg256-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for my_amp_pipe/memory. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:35]
-WARNING: [Synth 8-6014] Unused sequential element clk_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:52]
-WARNING: [Synth 8-327] inferring latch for variable 'sdo_reg' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:84]
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:37]
+WARNING: [Synth 8-6014] Unused sequential element write_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/amp_pipe.v:51]
+WARNING: [Synth 8-6014] Unused sequential element clk_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:69]
+WARNING: [Synth 8-327] inferring latch for variable 'sdo_reg' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:87]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -861,16 +875,16 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element clk_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:52]
-WARNING: [Synth 8-6014] Unused sequential element dac_spi/counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:35]
-WARNING: [Synth 8-6014] Unused sequential element clk_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:52]
+WARNING: [Synth 8-6014] Unused sequential element clk_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:69]
+WARNING: [Synth 8-6014] Unused sequential element dac_spi/counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:37]
+WARNING: [Synth 8-6014] Unused sequential element my_amp_pipe/write_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/amp_pipe.v:51]
+WARNING: [Synth 8-6014] Unused sequential element clk_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:69]
 WARNING: [Synth 8-3917] design OSC1_LITE_Control has port hi_muxsel driven by constant 0
 WARNING: [Synth 8-3917] design OSC1_LITE_Control has port led[7] driven by constant 1
 WARNING: [Synth 8-3917] design OSC1_LITE_Control has port led[5] driven by constant 1
 WARNING: [Synth 8-3917] design OSC1_LITE_Control has port led[3] driven by constant 1
 WARNING: [Synth 8-3332] Sequential element (l008c72ad3b3ec61be52cde84a395c4fa_reg) is unused and will be removed from module okCore.
 WARNING: [Synth 8-3332] Sequential element (la85eaf42c58af45585f858cdefb86492_reg) is unused and will be removed from module okCore.
-WARNING: [Synth 8-3332] Sequential element (lff3d64fc8c56e1daea4118a6081cd348_reg) is unused and will be removed from module okCore.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[3] )
@@ -892,7 +906,6 @@ WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[12]) is unused and w
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[13]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[14]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[15]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[1]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[2]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[3]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[4]) is unused and will be removed from module okWireIn__1.
@@ -907,7 +920,6 @@ WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[12]) is unused and wi
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[13]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[14]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[15]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[1]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[2]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[3]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[4]) is unused and will be removed from module okWireIn__1.
@@ -972,6 +984,8 @@ WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[6]) is unused and wil
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[7]) is unused and will be removed from module okWireIn__3.
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[8]) is unused and will be removed from module okWireIn__3.
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[9]) is unused and will be removed from module okWireIn__3.
+WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[15]) is unused and will be removed from module okWireIn__5.
+WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[15]) is unused and will be removed from module okWireIn__5.
 WARNING: [Synth 8-3332] Sequential element (wirehold_reg[10]) is unused and will be removed from module okWireOut.
 WARNING: [Synth 8-3332] Sequential element (wirehold_reg[11]) is unused and will be removed from module okWireOut.
 WARNING: [Synth 8-3332] Sequential element (wirehold_reg[12]) is unused and will be removed from module okWireOut.
@@ -983,9 +997,10 @@ WARNING: [Synth 8-3332] Sequential element (wirehold_reg[2]) is unused and will 
 WARNING: [Synth 8-3332] Sequential element (wirehold_reg[3]) is unused and will be removed from module okWireOut.
 WARNING: [Synth 8-3332] Sequential element (wirehold_reg[4]) is unused and will be removed from module okWireOut.
 WARNING: [Synth 8-3332] Sequential element (wirehold_reg[5]) is unused and will be removed from module okWireOut.
+WARNING: [Synth 8-3332] Sequential element (wirehold_reg[6]) is unused and will be removed from module okWireOut.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -997,13 +1012,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1015,7 +1030,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1039,7 +1054,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1052,7 +1067,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1064,79 +1079,81 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |blk_mem_gen_0 |         1|
++------+--------------+----------+
 
 Report Cell Usage: 
-+------+------------+------+
-|      |Cell        |Count |
-+------+------------+------+
-|1     |BUFG        |     3|
-|2     |CARRY4      |    26|
-|3     |DNA_PORT    |     1|
-|4     |LUT1        |    37|
-|5     |LUT2        |    55|
-|6     |LUT3        |    58|
-|7     |LUT4        |   118|
-|8     |LUT5        |    78|
-|9     |LUT6        |   273|
-|10    |LUT6_2      |    50|
-|11    |MMCME2_BASE |     1|
-|12    |MUXF7       |     8|
-|13    |MUXF8       |     4|
-|14    |RAM128X1S   |     8|
-|15    |RAM32M      |     4|
-|16    |RAMB18E1    |     1|
-|17    |RAMB18E1_1  |     1|
-|18    |FDCE        |   156|
-|19    |FDPE        |    44|
-|20    |FDRE        |   417|
-|21    |LD          |    16|
-|22    |IBUF        |     9|
-|23    |IBUFG       |     1|
-|24    |IOBUF       |    17|
-|25    |OBUF        |    15|
-+------+------------+------+
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |blk_mem_gen_0 |     1|
+|2     |BUFG          |     4|
+|3     |CARRY4        |    48|
+|4     |DNA_PORT      |     1|
+|5     |LUT1          |    96|
+|6     |LUT2          |    92|
+|7     |LUT3          |    70|
+|8     |LUT4          |   158|
+|9     |LUT5          |    79|
+|10    |LUT6          |   338|
+|11    |LUT6_2        |    50|
+|12    |MMCME2_BASE   |     1|
+|13    |RAM128X1S     |     8|
+|14    |RAM32M        |     4|
+|15    |RAMB18E1      |     1|
+|16    |RAMB18E1_1    |     1|
+|17    |XORCY         |     1|
+|18    |FDCE          |   156|
+|19    |FDPE          |    44|
+|20    |FDRE          |   549|
+|21    |LD            |    16|
+|22    |IBUF          |     9|
+|23    |IBUFG         |     1|
+|24    |IOBUF         |    17|
+|25    |OBUF          |    15|
++------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 696.035 ; gain = 427.105
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 709.418 ; gain = 424.121
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 588 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 696.035 ; gain = 128.148
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 696.035 ; gain = 427.105
+Synthesis finished with 0 errors, 0 critical warnings and 615 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 709.418 ; gain = 126.168
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 709.418 ; gain = 424.121
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 134 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 157 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 97 instances were transformed.
+  A total of 98 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 1 instances
   IBUFG => IBUF: 1 instances
   IOBUF => IOBUF (IBUF, OBUFT): 17 instances
   LD => LDCE: 16 instances
@@ -1145,9 +1162,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM128X1S => RAM128X1S (MUXF7, RAMS64E, RAMS64E): 8 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 4 instances
 
-669 Infos, 225 Warnings, 0 Critical Warnings and 0 Errors encountered.
+679 Infos, 227 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 696.035 ; gain = 434.871
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 709.418 ; gain = 430.680
 INFO: [Common 17-1381] The checkpoint 'C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/synth_1/OSC1_LITE_Control.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 696.035 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 28 21:26:24 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 709.418 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jan  4 13:01:58 2019...

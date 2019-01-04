@@ -3,8 +3,8 @@ module amp_pipe(
    input  wire				  ti_clk,	
 	input  wire				  reset,	
 	input  wire				  clk,
-	input  wire [15:0]	  period,
-	input  wire [15:0]	  num_of_pulses,
+	input  wire [15:0]	      period,
+	input  wire [15:0]	      num_of_pulses,
 	
 	input  wire            pipe_in_write_trigger,	
 	input  wire [15:0]     pipe_in_write_data,
@@ -21,11 +21,11 @@ wire pipe_out_read;
 reg  write_toggle;
 wire pipe_in_write;
 
-reg  [15:0]			read_counter;		
-reg  [15:0]			next_read_counter;
+reg  [14:0]			read_counter;		
+reg  [14:0]			next_read_counter;
 
-reg [15:0]			write_counter;
-reg [15:0]			next_write_counter;
+reg [14:0]			write_counter;
+reg [14:0]			next_write_counter;
 
 reg [15:0]			complete_pulse_counter;
 reg [15:0]			next_complete_pulse_counter;
@@ -45,10 +45,10 @@ assign pipe_in_write = pipe_in_write_trigger | write_toggle;
 assign pipe_out_read_data = reset ? 0 : (pipe_in_write == 1'b1) ? 0 : (num_of_pulses == 16'b0) ? 0 :
 						((pipe_out_read | state_read == 1'b1) && (complete_pulse_counter < num_of_pulses|| (complete_pulse_counter == num_of_pulses && read_counter == 0))) ? data_out : 0;
 			 
-my_pipe_memory memory( 
+blk_mem_gen_0 memory( 
 	.clka(ti_clk), // input clka  
 	.wea(pipe_in_write), // input [0 : 0] wea 
-	.addra(write_counter), // input [15 : 0] addra 
+	.addra(write_counter), // input [14 : 0] addra 
 	.dina(pipe_in_write_data), // input [15 : 0] dina 
 	.doutb(data_out), // output [15 : 0] douta);
 	.addrb(read_counter),
@@ -57,7 +57,7 @@ my_pipe_memory memory(
 
 always @ (posedge clk) begin
 	if(reset) begin
-	read_counter 					 <= 16'b0;
+	read_counter 					 <= 15'b0;
 	state_read        			 <= 1'b0;
 	
 	complete_pulse_counter 		 <= 16'b0;
@@ -72,7 +72,7 @@ end
 
 always @ (posedge ti_clk) begin
 	if(reset) begin
-	write_counter 		 <= 16'b0;
+	write_counter 		 <= 15'b0;
 	state_write			 <= 1'b0;
 	read_toggle        <= 1'b0;
 	write_toggle       <= 1'b0;
@@ -132,11 +132,11 @@ always @ (*) begin
 						
 						if(pipe_in_write)
 							next_read_counter = 0;
-						else if(pipe_out_read && read_counter + 1 == period[15:0]) begin		   
+						else if(pipe_out_read && read_counter + 1 == period[14:0]) begin		   
 							next_read_counter = 0;
 							next_complete_pulse_counter = complete_pulse_counter + 1;
 					   end
-						else if(pipe_out_read && read_counter == 16'b1111111111111111)
+						else if(pipe_out_read && read_counter == 15'b111111111111111)
 							next_read_counter = read_counter;
 						else if(pipe_out_read)	  
 							next_read_counter = read_counter + 1;
