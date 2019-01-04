@@ -68,13 +68,13 @@ input wire clka;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA WE" *)
 input wire [0 : 0] wea;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *)
-input wire [14 : 0] addra;
+input wire [15 : 0] addra;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA DIN" *)
 input wire [15 : 0] dina;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB CLK" *)
 input wire clkb;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR" *)
-input wire [14 : 0] addrb;
+input wire [15 : 0] addrb;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB DOUT" *)
 output wire [15 : 0] doutb;
 
@@ -97,7 +97,7 @@ output wire [15 : 0] doutb;
     .C_LOAD_INIT_FILE(0),
     .C_INIT_FILE_NAME("no_coe_file_loaded"),
     .C_INIT_FILE("blk_mem_gen_0.mem"),
-    .C_USE_DEFAULT_DATA(1),
+    .C_USE_DEFAULT_DATA(0),
     .C_DEFAULT_DATA("0"),
     .C_HAS_RSTA(0),
     .C_RST_PRIORITY_A("CE"),
@@ -107,12 +107,12 @@ output wire [15 : 0] doutb;
     .C_HAS_REGCEA(0),
     .C_USE_BYTE_WEA(0),
     .C_WEA_WIDTH(1),
-    .C_WRITE_MODE_A("WRITE_FIRST"),
+    .C_WRITE_MODE_A("NO_CHANGE"),
     .C_WRITE_WIDTH_A(16),
     .C_READ_WIDTH_A(16),
-    .C_WRITE_DEPTH_A(32768),
-    .C_READ_DEPTH_A(32768),
-    .C_ADDRA_WIDTH(15),
+    .C_WRITE_DEPTH_A(40000),
+    .C_READ_DEPTH_A(40000),
+    .C_ADDRA_WIDTH(16),
     .C_HAS_RSTB(0),
     .C_RST_PRIORITY_B("CE"),
     .C_RSTRAM_B(0),
@@ -124,9 +124,9 @@ output wire [15 : 0] doutb;
     .C_WRITE_MODE_B("WRITE_FIRST"),
     .C_WRITE_WIDTH_B(16),
     .C_READ_WIDTH_B(16),
-    .C_WRITE_DEPTH_B(32768),
-    .C_READ_DEPTH_B(32768),
-    .C_ADDRB_WIDTH(15),
+    .C_WRITE_DEPTH_B(40000),
+    .C_READ_DEPTH_B(40000),
+    .C_ADDRB_WIDTH(16),
     .C_HAS_MEM_OUTPUT_REGS_A(0),
     .C_HAS_MEM_OUTPUT_REGS_B(1),
     .C_HAS_MUX_OUTPUT_REGS_A(0),
@@ -138,9 +138,9 @@ output wire [15 : 0] doutb;
     .C_USE_ECC(0),
     .C_EN_ECC_PIPE(0),
     .C_HAS_INJECTERR(0),
-    .C_SIM_COLLISION_CHECK("NONE"),
+    .C_SIM_COLLISION_CHECK("ALL"),
     .C_COMMON_CLK(0),
-    .C_DISABLE_WARN_BHV_COLL(1),
+    .C_DISABLE_WARN_BHV_COLL(0),
     .C_EN_SLEEP_PIN(0),
     .C_USE_URAM(0),
     .C_EN_RDADDRA_CHG(0),
@@ -148,10 +148,10 @@ output wire [15 : 0] doutb;
     .C_EN_DEEPSLEEP_PIN(0),
     .C_EN_SHUTDOWN_PIN(0),
     .C_EN_SAFETY_CKT(0),
-    .C_DISABLE_WARN_BHV_RANGE(1),
-    .C_COUNT_36K_BRAM("15"),
-    .C_COUNT_18K_BRAM("0"),
-    .C_EST_POWER_SUMMARY("Estimated Power for IP     :     37.119988 mW")
+    .C_DISABLE_WARN_BHV_RANGE(0),
+    .C_COUNT_36K_BRAM("18"),
+    .C_COUNT_18K_BRAM("2"),
+    .C_EST_POWER_SUMMARY("Estimated Power for IP     :     30.840694 mW")
   ) inst (
     .clka(clka),
     .rsta(1'D0),

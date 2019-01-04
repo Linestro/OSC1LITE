@@ -41,6 +41,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/constrs_1/imports/Desktop/xem7001.xdc
 set_property used_in_implementation false [get_files C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/constrs_1/imports/Desktop/xem7001.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 
 synth_design -top OSC1_LITE_Control -part xc7a15tftg256-1
 

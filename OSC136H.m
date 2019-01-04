@@ -299,10 +299,11 @@ classdef OSC136H < handle
             pause(0.1);
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
 
-            this.WriteToWireIn(hex2dec('15'), 0, 16, numel(pipe_data));
             if cont == 0
+                this.WriteToWireIn(hex2dec('15'), 0, 16, numel(pipe_data));
             	this.WriteToWireIn(hex2dec('16'), 0, 16, num_of_pulses);
             else
+                this.WriteToWireIn(hex2dec('15'), 0, 16, numel(pipe_data));
             	this.WriteToWireIn(hex2dec('16'), 0, 16, 65535);
             end
             
@@ -314,7 +315,6 @@ classdef OSC136H < handle
             
             data_out(2 * SIZE, 1) = uint8(0);
             for i = 1:SIZE
-                fprintf('Read %d \n',   pipe_data(i));
                 if pipe_data(i) > 2^17
                     pipe_data(i) = 2^17 - 1;
                 end
@@ -323,14 +323,16 @@ classdef OSC136H < handle
                 end
                 data_out(2 * i - 1) = uint8(floor(pipe_data(i) / 256)); 
                 data_out(2 * i) = uint8(mod(pipe_data(i), 256)); 
+                fprintf('Write %d into memory\n', data_out(2 * i - 1));
+                fprintf('Write %d into memory\n', data_out(2 * i));
             end
 
             success_ret = calllib('okFrontPanel', 'okFrontPanel_WriteToPipeIn', this.dev, hex2dec('80'), 2 * SIZE, data_out);
-            fprintf('Success %d \n',   success_ret);
+            fprintf('Success %d \n', success_ret);
             
-            this.WriteToWireIn(hex2dec('00'), 0, 16, 2);
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 2);    % switch to pipe mode
             pause(0.1);
-            this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
+            this.WriteToWireIn(hex2dec('01'), 0, 16, 1);    % switch to write mode
 
             persistent buf pv;
             buf(2 * SIZE, 1) = uint8(0);
