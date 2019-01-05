@@ -23,12 +23,11 @@ read_verilog -library xil_defaultlib {
   {C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okPipeIn.v}
   {C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okPipeOut.v}
   {C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okWireIn.v}
-  {C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okWireOut.v}
   C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v
 }
-read_ip -quiet c:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+read_ip -quiet C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
-set_property is_locked true [get_files c:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+set_property is_locked true [get_files C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

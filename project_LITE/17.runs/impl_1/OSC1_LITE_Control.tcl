@@ -56,8 +56,8 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   add_files -quiet C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/synth_1/OSC1_LITE_Control.dcp
-  read_ip -quiet c:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-  set_property is_locked true [get_files c:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+  read_ip -quiet C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  set_property is_locked true [get_files C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
   read_xdc C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/constrs_1/imports/Desktop/xem7001.xdc
   link_design -top OSC1_LITE_Control -part xc7a15tftg256-1
   close_msg_db -file init_design.pb

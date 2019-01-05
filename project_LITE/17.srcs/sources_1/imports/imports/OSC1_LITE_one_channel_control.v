@@ -44,9 +44,9 @@ wire [2:0]	mode;
 wire 		clear_request;
 wire [15:0]	data_from_user;
 
-wire [15:0] current_to_dac_chip;
+//wire [15:0] current_to_dac_chip;
 
-wire [15:0] sdo;
+//wire [15:0] sdo;
 
 
 
@@ -62,7 +62,7 @@ wire [15:0]  num_of_pulses;
 wire		 spi_pipe_clk;
 
 assign hi_muxsel = 1'b0;
-assign current_to_dac_chip = pipe ? {pipe_out_read_data[1:0],pipe_out_read_data[15:8]} : data_from_user;
+//assign current_to_dac_chip = pipe ? {pipe_out_read_data[1:0],pipe_out_read_data[15:8]} : data_from_user;
 assign led = rst ? 8'b10101010 : {5'b11111,~mode};
 
 spi_controller dac_spi(
@@ -71,13 +71,15 @@ spi_controller dac_spi(
 	.mode(mode), // Opal Kelly write bit: 2'b00 for nop, 2'b01 for write, 2'b10 for read
 	.clear_request(clear_request),		// OK clr DAC pin
 
-	.data_from_user(current_to_dac_chip),	// waveform_info
+	.pipe(pipe),
+	.data_from_memory({pipe_out_read_data[7:0],pipe_out_read_data[15:8]}),
+	.data_from_user(data_from_user),	// waveform_info
 
 
 	.sdo_bit(sdo_bit),		
 
 	/* Output pins*/
-	.sdo(sdo),
+	//.sdo(sdo),
 
 	// .sdo(sdo),		// DAC output sdo[15:0]. Should contain read data only when read from register
 					// For non-feedback control purpose, this variable should not be affecting functionality. See Manual Page 10.
@@ -113,7 +115,7 @@ okHost okHI(
 	.hi_in(hi_in), .hi_out(hi_out), .hi_inout(hi_inout), .hi_aa(hi_aa), .ti_clk(ti_clk),
 	.ok1(ok1), .ok2(ok2));
 
-wire [17*4-1:0]  ok2x;
+wire [17*2-1:0]  ok2x;
 okWireOR # (.N(2)) wireOR (ok2, ok2x);
 okWireIn     wi00 (.ok1(ok1),                           .ep_addr(8'h00), .ep_dataout({sys_ctrl_pad1, pipe, rst}));
 okWireIn     wi01 (.ok1(ok1),                           .ep_addr(8'h01), .ep_dataout({sys_ctrl_pad2, mode}));
@@ -123,11 +125,11 @@ okWireIn     wi03 (.ok1(ok1),                           .ep_addr(8'h03), .ep_dat
 okWireIn     wi15 (.ok1(ok1),                           .ep_addr(8'h15), .ep_dataout(period[15:0]));
 okWireIn     wi16 (.ok1(ok1),                           .ep_addr(8'h16), .ep_dataout(num_of_pulses[15:0]));
 
-okWireOut    wo21 (.ok1(ok1), .ok2(ok2x[ 0*17 +: 17 ]), .ep_addr(8'h21), .ep_datain(sdo));
-okWireOut    wo22 (.ok1(ok1), .ok2(ok2x[ 1*17 +: 17 ]), .ep_addr(8'h22), .ep_datain({15'b0,pipe}));
+//okWireOut    wo21 (.ok1(ok1), .ok2(ok2x[ 0*17 +: 17 ]), .ep_addr(8'h21), .ep_datain(sdo));
+//okWireOut    wo22 (.ok1(ok1), .ok2(ok2x[ 1*17 +: 17 ]), .ep_addr(8'h22), .ep_datain({15'b0,pipe}));
 
-okPipeIn	pi80 ( .ok1(ok1), .ok2(ok2x[ 2*17 +: 17 ]), .ep_addr(8'h80), .ep_write(pipe_in_write_enable), .ep_dataout(pipe_in_write_data));
-okPipeOut 	poa0 ( .ok1(ok1), .ok2(ok2x[ 3*17 +: 17 ]), .ep_addr(8'hA0), .ep_read(pipe_out_read_enable), .ep_datain(pipe_out_read_data));
+okPipeIn	pi80 ( .ok1(ok1), .ok2(ok2x[ 0*17 +: 17 ]), .ep_addr(8'h80), .ep_write(pipe_in_write_enable), .ep_dataout(pipe_in_write_data));
+okPipeOut poa0 ( .ok1(ok1), .ok2(ok2x[ 1*17 +: 17 ]), .ep_addr(8'hA0), .ep_read(pipe_out_read_enable), .ep_datain(pipe_out_read_data));
 
 
 always @ (posedge clk or posedge rst) begin

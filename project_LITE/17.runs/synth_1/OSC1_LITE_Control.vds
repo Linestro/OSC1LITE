@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Jan  4 14:39:39 2019
-# Process ID: 72224
+# Start of session at: Sat Jan  5 15:01:08 2019
+# Process ID: 79692
 # Current directory: C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/synth_1
 # Command line: vivado.exe -log OSC1_LITE_Control.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OSC1_LITE_Control.tcl
 # Log file: C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/synth_1/OSC1_LITE_Control.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a15t-ftg256'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a15t-ftg256'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 62304 
+INFO: Helper process launched with PID 79600 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 362.965 ; gain = 81.738
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 363.012 ; gain = 81.766
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'OSC1_LITE_Control' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:4]
 INFO: [Synth 8-638] synthesizing module 'spi_controller' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:7]
@@ -664,16 +664,13 @@ INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized171' (37#1) [C:
 INFO: [Synth 8-256] done synthesizing module 'okHost' (40#1) [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okLibrary.v:13]
 INFO: [Synth 8-638] synthesizing module 'okWireOR' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okLibrary.v:118]
 INFO: [Synth 8-256] done synthesizing module 'okWireOR' (41#1) [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okLibrary.v:118]
-WARNING: [Synth 8-689] width (68) of port connection 'ok2s' does not match port width (34) of module 'okWireOR' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:117]
 INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized30' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
 INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized30' (41#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20572]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:126]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:127]
 INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized37' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
-INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized37' (43#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized37' (42#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20618]
 INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized172' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized172' (43#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
-INFO: [Synth 8-256] done synthesizing module 'OSC1_LITE_Control' (46#1) [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:4]
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized172' (42#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20668]
+INFO: [Synth 8-256] done synthesizing module 'OSC1_LITE_Control' (45#1) [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:4]
 WARNING: [Synth 8-3917] design OSC1_LITE_Control has port hi_muxsel driven by constant 0
 WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[30]
 WARNING: [Synth 8-3331] design okPipeOut has unconnected port ok1[29]
@@ -701,26 +698,6 @@ WARNING: [Synth 8-3331] design okPipeIn has unconnected port ok1[30]
 WARNING: [Synth 8-3331] design okPipeIn has unconnected port ok1[29]
 WARNING: [Synth 8-3331] design okPipeIn has unconnected port ok1[28]
 WARNING: [Synth 8-3331] design okPipeIn has unconnected port ok1[26]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[30]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[29]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[27]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[26]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[15]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[14]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[13]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[12]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[11]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[10]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[9]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[8]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[7]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[6]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[5]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[4]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[3]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[2]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[1]
-WARNING: [Synth 8-3331] design okWireOut has unconnected port ok1[0]
 WARNING: [Synth 8-3331] design okWireIn has unconnected port ok1[30]
 WARNING: [Synth 8-3331] design okWireIn has unconnected port ok1[29]
 WARNING: [Synth 8-3331] design okWireIn has unconnected port ok1[26]
@@ -775,9 +752,29 @@ WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port m_acl
 WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_aclk
 WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_aresetn
 WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port m_aclk_en
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_aclk_en
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awid[0]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[31]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[30]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[29]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[28]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[27]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[26]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[25]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[24]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[23]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[22]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[21]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[20]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[19]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[18]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[17]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[16]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[15]
+WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[14]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 571.941 ; gain = 290.715
+Finished RTL Elaboration : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 571.984 ; gain = 290.738
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -787,9 +784,9 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 571.941 ; gain = 290.715
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 571.984 ; gain = 290.738
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 129 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 126 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7a15tftg256-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -824,30 +821,29 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM128X1S => RAM128X1S (RAMS64E, RAMS64E, MUXF7): 8 instances
   RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 715.742 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 710.391 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished Constraint Validation : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a15tftg256-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for my_amp_pipe/memory. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:37]
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:42]
 WARNING: [Synth 8-6014] Unused sequential element write_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/amp_pipe.v:51]
 WARNING: [Synth 8-6014] Unused sequential element clk_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:69]
-WARNING: [Synth 8-327] inferring latch for variable 'sdo_reg' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:87]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -880,23 +876,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element clk_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:69]
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/ENOUT" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element dac_spi/counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:37]
+WARNING: [Synth 8-6014] Unused sequential element dac_spi/counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:42]
 WARNING: [Synth 8-6014] Unused sequential element my_amp_pipe/write_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/amp_pipe.v:51]
 WARNING: [Synth 8-6014] Unused sequential element clk_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:69]
 WARNING: [Synth 8-3917] design OSC1_LITE_Control has port hi_muxsel driven by constant 0
@@ -905,21 +885,28 @@ WARNING: [Synth 8-3917] design OSC1_LITE_Control has port led[5] driven by const
 WARNING: [Synth 8-3917] design OSC1_LITE_Control has port led[3] driven by constant 1
 WARNING: [Synth 8-3332] Sequential element (l008c72ad3b3ec61be52cde84a395c4fa_reg) is unused and will be removed from module okCore.
 WARNING: [Synth 8-3332] Sequential element (la85eaf42c58af45585f858cdefb86492_reg) is unused and will be removed from module okCore.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (wo22/\wirehold_reg[15] )
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[5]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[4]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[3]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[2]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[15]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[14]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[13]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[12]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[11]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[10]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[9]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[8]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[7]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[6]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[5]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[4]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[3]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[2]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[1]) is unused and will be removed from module blk_mem_gen_v8_3_6.
+INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[0]) is unused and will be removed from module blk_mem_gen_v8_3_6.
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[10]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[11]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[12]) is unused and will be removed from module okWireIn__1.
@@ -996,31 +983,9 @@ WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[13]) is unused and wi
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[14]) is unused and will be removed from module okWireIn__3.
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[15]) is unused and will be removed from module okWireIn__3.
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[1]) is unused and will be removed from module okWireIn__3.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[2]) is unused and will be removed from module okWireIn__3.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[3]) is unused and will be removed from module okWireIn__3.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[4]) is unused and will be removed from module okWireIn__3.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[5]) is unused and will be removed from module okWireIn__3.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[6]) is unused and will be removed from module okWireIn__3.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[7]) is unused and will be removed from module okWireIn__3.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[8]) is unused and will be removed from module okWireIn__3.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[9]) is unused and will be removed from module okWireIn__3.
-WARNING: [Synth 8-3332] Sequential element (wirehold_reg[10]) is unused and will be removed from module okWireOut.
-WARNING: [Synth 8-3332] Sequential element (wirehold_reg[11]) is unused and will be removed from module okWireOut.
-WARNING: [Synth 8-3332] Sequential element (wirehold_reg[12]) is unused and will be removed from module okWireOut.
-WARNING: [Synth 8-3332] Sequential element (wirehold_reg[13]) is unused and will be removed from module okWireOut.
-WARNING: [Synth 8-3332] Sequential element (wirehold_reg[14]) is unused and will be removed from module okWireOut.
-WARNING: [Synth 8-3332] Sequential element (wirehold_reg[15]) is unused and will be removed from module okWireOut.
-WARNING: [Synth 8-3332] Sequential element (wirehold_reg[1]) is unused and will be removed from module okWireOut.
-WARNING: [Synth 8-3332] Sequential element (wirehold_reg[2]) is unused and will be removed from module okWireOut.
-WARNING: [Synth 8-3332] Sequential element (wirehold_reg[3]) is unused and will be removed from module okWireOut.
-WARNING: [Synth 8-3332] Sequential element (wirehold_reg[4]) is unused and will be removed from module okWireOut.
-WARNING: [Synth 8-3332] Sequential element (wirehold_reg[5]) is unused and will be removed from module okWireOut.
-WARNING: [Synth 8-3332] Sequential element (wirehold_reg[6]) is unused and will be removed from module okWireOut.
-WARNING: [Synth 8-3332] Sequential element (wirehold_reg[7]) is unused and will be removed from module okWireOut.
-WARNING: [Synth 8-3332] Sequential element (wirehold_reg[8]) is unused and will be removed from module okWireOut.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:08 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1032,13 +997,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:13 ; elapsed = 00:01:17 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished Timing Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:17 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1050,7 +1015,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished Technology Mapping : Time (s): cpu = 00:01:14 ; elapsed = 00:01:17 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1074,7 +1039,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished IO Insertion : Time (s): cpu = 00:01:14 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1087,7 +1052,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:14 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1099,25 +1064,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:16 ; elapsed = 00:01:19 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1136,12 +1101,12 @@ Report Cell Usage:
 |1     |BUFG        |     4|
 |2     |CARRY4      |    48|
 |3     |DNA_PORT    |     1|
-|4     |LUT1        |    99|
-|5     |LUT2        |    96|
-|6     |LUT3        |    74|
-|7     |LUT4        |   187|
-|8     |LUT5        |   115|
-|9     |LUT6        |   335|
+|4     |LUT1        |    98|
+|5     |LUT2        |    71|
+|6     |LUT3        |    88|
+|7     |LUT4        |   165|
+|8     |LUT5        |    88|
+|9     |LUT6        |   372|
 |10    |LUT6_2      |    50|
 |11    |MMCME2_BASE |     1|
 |12    |RAM128X1S   |     8|
@@ -1149,45 +1114,40 @@ Report Cell Usage:
 |14    |RAMB18E1    |     1|
 |15    |RAMB18E1_1  |     1|
 |16    |RAMB18E1_2  |     1|
-|17    |RAMB18E1_3  |     1|
-|18    |RAMB36E1    |     7|
-|19    |RAMB36E1_1  |     1|
-|20    |RAMB36E1_2  |    10|
-|21    |XORCY       |     1|
-|22    |FDCE        |   156|
-|23    |FDPE        |    44|
-|24    |FDRE        |   561|
-|25    |LD          |    16|
-|26    |IBUF        |     9|
-|27    |IBUFG       |     1|
-|28    |IOBUF       |    17|
-|29    |OBUF        |    15|
+|17    |RAMB36E1    |    16|
+|18    |XORCY       |     1|
+|19    |FDCE        |   135|
+|20    |FDPE        |    44|
+|21    |FDRE        |   553|
+|22    |IBUF        |     8|
+|23    |IBUFG       |     1|
+|24    |IOBUF       |    17|
+|25    |OBUF        |    15|
 +------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:16 ; elapsed = 00:01:19 . Memory (MB): peak = 715.742 ; gain = 434.516
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 766 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:01:12 . Memory (MB): peak = 715.742 ; gain = 290.715
-Synthesis Optimization Complete : Time (s): cpu = 00:01:16 ; elapsed = 00:01:19 . Memory (MB): peak = 715.742 ; gain = 434.516
+Synthesis finished with 0 errors, 0 critical warnings and 1303 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:01:11 . Memory (MB): peak = 710.391 ; gain = 290.738
+Synthesis Optimization Complete : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 177 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 157 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 98 instances were transformed.
+  A total of 82 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 1 instances
   IBUFG => IBUF: 1 instances
   IOBUF => IOBUF (IBUF, OBUFT): 17 instances
-  LD => LDCE: 16 instances
   LUT6_2 => LUT6_2 (LUT5, LUT6): 50 instances
   MMCME2_BASE => MMCME2_ADV: 1 instances
   RAM128X1S => RAM128X1S (MUXF7, RAMS64E, RAMS64E): 8 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 4 instances
 
-696 Infos, 229 Warnings, 0 Critical Warnings and 0 Errors encountered.
+687 Infos, 203 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 715.742 ; gain = 437.145
+synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:22 . Memory (MB): peak = 710.391 ; gain = 429.766
 INFO: [Common 17-1381] The checkpoint 'C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/synth_1/OSC1_LITE_Control.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 715.742 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Jan  4 14:41:08 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 710.391 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Jan  5 15:02:37 2019...

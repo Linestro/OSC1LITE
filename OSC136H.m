@@ -159,7 +159,7 @@ classdef OSC136H < handle
                 return
             end
             fprintf('Successfully opened board\n')
-
+% this.Configure('OSC1_36_H_uDriver_Control (2).bit');
             this.Configure('OSC1_LITE_Control.bit');
             this.SysReset();
             pause(0.1);
@@ -340,12 +340,12 @@ classdef OSC136H < handle
             success_ret = calllib('okFrontPanel', 'okFrontPanel_ReadFromPipeOut', this.dev, hex2dec('A0'), 2 * SIZE, pv);
             fprintf('Success %d \n',   success_ret);
             
-        epvalue = get(pv, 'Value');
-        pipe_out_data = zeros(SIZE, 1);
-        for i = 1:SIZE
-            pipe_out_data(i) = uint16(epvalue(2 * i - 1))* 256 + uint16(epvalue(2 * i));
-            fprintf('Read %d \n',   pipe_out_data(i));
-        end
+        % epvalue = get(pv, 'Value');
+        % pipe_out_data = zeros(SIZE, 1);
+        % for i = 1:SIZE
+        %     pipe_out_data(i) = uint16(epvalue(2 * i - 1))* 256 + uint16(epvalue(2 * i));
+        %     fprintf('Read %d \n',   pipe_out_data(i));
+        % end
             ec = 0;
         end
 

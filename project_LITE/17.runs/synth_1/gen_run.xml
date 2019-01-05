@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a15tftg256-1" LaunchTime="1546630776">
+<GenRun Id="synth_1" LaunchPart="xc7a15tftg256-1" LaunchTime="1546718465">
   <File Type="RDS-PROPCONSTRS" Name="OSC1_LITE_Control_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="OSC1_LITE_Control.tcl"/>
   <File Type="RDS-RDS" Name="OSC1_LITE_Control.vds"/>
@@ -78,19 +78,20 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okWireOut.v">
+    <File Path="$PSRCDIR/sources_1/imports/imports/OSC1_LITE_one_channel_control.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okWireOut.v"/>
-        <Attr Name="ImportTime" Val="1525201188"/>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/imports/OSC1_LITE_one_channel_control.v"/>
+        <Attr Name="ImportTime" Val="1545320846"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/imports/OSC1_LITE_one_channel_control.v">
+    <File Path="$PSRCDIR/sources_1/imports/Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okWireOut.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/imports/OSC1_LITE_one_channel_control.v"/>
-        <Attr Name="ImportTime" Val="1545320846"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Program Files/Opal Kelly/FrontPanelUSB/FrontPanelHDL/XEM7001-A15/okWireOut.v"/>
+        <Attr Name="ImportTime" Val="1525201188"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
