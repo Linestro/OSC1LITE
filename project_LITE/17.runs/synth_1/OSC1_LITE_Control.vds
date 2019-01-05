@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Sat Jan  5 15:01:08 2019
-# Process ID: 79692
+# Start of session at: Sat Jan  5 15:44:06 2019
+# Process ID: 77004
 # Current directory: C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/synth_1
 # Command line: vivado.exe -log OSC1_LITE_Control.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OSC1_LITE_Control.tcl
 # Log file: C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/synth_1/OSC1_LITE_Control.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a15t-ftg256'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a15t-ftg256'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 79600 
+INFO: Helper process launched with PID 80500 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 363.012 ; gain = 81.766
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 363.660 ; gain = 82.820
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'OSC1_LITE_Control' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:4]
 INFO: [Synth 8-638] synthesizing module 'spi_controller' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:7]
@@ -774,7 +774,7 @@ WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi
 WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[14]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 571.984 ; gain = 290.738
+Finished RTL Elaboration : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 571.633 ; gain = 290.793
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -784,7 +784,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 571.984 ; gain = 290.738
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 571.633 ; gain = 290.793
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 126 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -821,29 +821,28 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM128X1S => RAM128X1S (RAMS64E, RAMS64E, MUXF7): 8 instances
   RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 710.391 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 710.043 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished Constraint Validation : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a15tftg256-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for my_amp_pipe/memory. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:42]
 WARNING: [Synth 8-6014] Unused sequential element write_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/amp_pipe.v:51]
-WARNING: [Synth 8-6014] Unused sequential element clk_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:69]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -875,10 +874,8 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element clk_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:69]
 WARNING: [Synth 8-6014] Unused sequential element dac_spi/counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:42]
 WARNING: [Synth 8-6014] Unused sequential element my_amp_pipe/write_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/amp_pipe.v:51]
-WARNING: [Synth 8-6014] Unused sequential element clk_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:69]
 WARNING: [Synth 8-3917] design OSC1_LITE_Control has port hi_muxsel driven by constant 0
 WARNING: [Synth 8-3917] design OSC1_LITE_Control has port led[7] driven by constant 1
 WARNING: [Synth 8-3917] design OSC1_LITE_Control has port led[5] driven by constant 1
@@ -985,7 +982,7 @@ WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[15]) is unused and wi
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[1]) is unused and will be removed from module okWireIn__3.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:08 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -997,13 +994,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:13 ; elapsed = 00:01:17 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:17 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1015,7 +1012,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:14 ; elapsed = 00:01:17 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:01:19 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1039,7 +1036,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:14 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished IO Insertion : Time (s): cpu = 00:01:16 ; elapsed = 00:01:19 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1052,7 +1049,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:14 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:01:19 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1064,25 +1061,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:16 ; elapsed = 00:01:19 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:16 ; elapsed = 00:01:19 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:16 ; elapsed = 00:01:19 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:16 ; elapsed = 00:01:19 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1101,12 +1098,12 @@ Report Cell Usage:
 |1     |BUFG        |     4|
 |2     |CARRY4      |    48|
 |3     |DNA_PORT    |     1|
-|4     |LUT1        |    98|
-|5     |LUT2        |    71|
-|6     |LUT3        |    88|
-|7     |LUT4        |   165|
-|8     |LUT5        |    88|
-|9     |LUT6        |   372|
+|4     |LUT1        |    97|
+|5     |LUT2        |    67|
+|6     |LUT3        |    84|
+|7     |LUT4        |   166|
+|8     |LUT5        |    87|
+|9     |LUT6        |   376|
 |10    |LUT6_2      |    50|
 |11    |MMCME2_BASE |     1|
 |12    |RAM128X1S   |     8|
@@ -1116,7 +1113,7 @@ Report Cell Usage:
 |16    |RAMB18E1_2  |     1|
 |17    |RAMB36E1    |    16|
 |18    |XORCY       |     1|
-|19    |FDCE        |   135|
+|19    |FDCE        |   128|
 |20    |FDPE        |    44|
 |21    |FDRE        |   553|
 |22    |IBUF        |     8|
@@ -1125,11 +1122,11 @@ Report Cell Usage:
 |25    |OBUF        |    15|
 +------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:16 ; elapsed = 00:01:19 . Memory (MB): peak = 710.043 ; gain = 429.203
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1303 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:01:11 . Memory (MB): peak = 710.391 ; gain = 290.738
-Synthesis Optimization Complete : Time (s): cpu = 00:01:15 ; elapsed = 00:01:18 . Memory (MB): peak = 710.391 ; gain = 429.145
+Synthesis finished with 0 errors, 0 critical warnings and 1300 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:01:13 . Memory (MB): peak = 710.043 ; gain = 290.793
+Synthesis Optimization Complete : Time (s): cpu = 00:01:16 ; elapsed = 00:01:20 . Memory (MB): peak = 710.043 ; gain = 429.203
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 157 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1145,9 +1142,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM128X1S => RAM128X1S (MUXF7, RAMS64E, RAMS64E): 8 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 4 instances
 
-687 Infos, 203 Warnings, 0 Critical Warnings and 0 Errors encountered.
+687 Infos, 200 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:22 . Memory (MB): peak = 710.391 ; gain = 429.766
+synth_design: Time (s): cpu = 00:01:18 ; elapsed = 00:01:23 . Memory (MB): peak = 710.043 ; gain = 431.828
 INFO: [Common 17-1381] The checkpoint 'C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/17.runs/synth_1/OSC1_LITE_Control.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 710.391 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Jan  5 15:02:37 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 710.043 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Jan  5 15:45:36 2019...

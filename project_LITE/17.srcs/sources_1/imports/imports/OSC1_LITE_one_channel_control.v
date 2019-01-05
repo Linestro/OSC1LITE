@@ -33,7 +33,7 @@ wire [13:0]  sys_ctrl_pad1;
 wire [12:0]  sys_ctrl_pad2;
 wire [14:0]  sys_ctrl_pad3;
 
-reg [6:0] 	 clk_counter;
+// reg [6:0] 	 clk_counter;
 
 
 
@@ -66,7 +66,7 @@ assign hi_muxsel = 1'b0;
 assign led = rst ? 8'b10101010 : {5'b11111,~mode};
 
 spi_controller dac_spi(
-	.clk(clk_counter[6]),	// Opal Kelly ti_clk
+	.clk(clk), //(clk_counter[1]),	// Opal Kelly ti_clk
 	.rst(rst),	// Opal Kelly reset
 	.mode(mode), // Opal Kelly write bit: 2'b00 for nop, 2'b01 for write, 2'b10 for read
 	.clear_request(clear_request),		// OK clr DAC pin
@@ -131,7 +131,7 @@ okWireIn     wi16 (.ok1(ok1),                           .ep_addr(8'h16), .ep_dat
 okPipeIn	pi80 ( .ok1(ok1), .ok2(ok2x[ 0*17 +: 17 ]), .ep_addr(8'h80), .ep_write(pipe_in_write_enable), .ep_dataout(pipe_in_write_data));
 okPipeOut poa0 ( .ok1(ok1), .ok2(ok2x[ 1*17 +: 17 ]), .ep_addr(8'hA0), .ep_read(pipe_out_read_enable), .ep_datain(pipe_out_read_data));
 
-
+/*
 always @ (posedge clk or posedge rst) begin
 	if(rst) begin
 		clk_counter <= 0;
@@ -139,6 +139,6 @@ always @ (posedge clk or posedge rst) begin
 		clk_counter <= clk_counter + 1;
 	end
 end
-
+*/
 
 endmodule
