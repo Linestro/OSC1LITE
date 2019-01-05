@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Sat Jan  5 15:46:41 2019
+| Date         : Sat Jan  5 16:52:23 2019
 | Host         : EECS-TOYODA running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file OSC1_LITE_Control_clock_utilization_routed.rpt
 | Design       : OSC1_LITE_Control
@@ -66,7 +66,7 @@ Table of Contents
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+--------------+--------------------------------------+----------------------+
 | src0      | g0        | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X0Y0 | X0Y0         |           1 |               0 |              20.830 | mmcm0_clk0   | okHI/mmcm0/CLKOUT0                   | okHI/mmcm0_clk0      |
 | src0      | g3        | MMCME2_ADV/CLKFBOUT | None       | MMCME2_ADV_X0Y0 | X0Y0         |           1 |               0 |              20.830 | mmcm0_clkfb  | okHI/mmcm0/CLKFBOUT                  | okHI/mmcm0_clkfb     |
-| src1      | g1        | LUT5/O              | None       | SLICE_X35Y45    | X0Y0         |           1 |               0 |                     |              | dac_spi/spi_pipe_clk_BUFG_inst_i_1/O | dac_spi/spi_pipe_clk |
+| src1      | g1        | LUT5/O              | None       | SLICE_X36Y45    | X1Y0         |           1 |               0 |                     |              | dac_spi/spi_pipe_clk_BUFG_inst_i_1/O | dac_spi/spi_pipe_clk |
 | src2      | g2        | IBUF/O              | IOB_X0Y26  | IOB_X0Y26       | X0Y0         |           1 |               0 |                     |              | clk_IBUF_inst/O                      | sclk_OBUF            |
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+--------------+--------------------------------------+----------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -79,7 +79,7 @@ Table of Contents
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+-------------------------------------------------------------------+----------------------------------------------------------+
 | Local Id | Driver Type/Pin | Constraint | Site/BEL          | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                                        | Net                                                      |
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+-------------------------------------------------------------------+----------------------------------------------------------+
-| 0        | FDPE/Q          | None       | SLICE_X28Y38/B5FF | X0Y0         |           1 |               3 |              |       | okHI/core0/core0/a0/d0/lc4da648cb12eeeb24e4d199c1195ed93_reg[4]/Q | okHI/core0/core0/a0/d0/l380f95c05ffaf9f64e84defb5d30e949 |
+| 0        | FDPE/Q          | None       | SLICE_X28Y36/B5FF | X0Y0         |           1 |               3 |              |       | okHI/core0/core0/a0/d0/lc4da648cb12eeeb24e4d199c1195ed93_reg[4]/Q | okHI/core0/core0/a0/d0/l380f95c05ffaf9f64e84defb5d30e949 |
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+-------------------------------------------------------------------+----------------------------------------------------------+
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents the clock pin loads (pin count)
@@ -94,8 +94,8 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |   16 |    50 |   32 |    50 |  721 |  1200 |  212 |   400 |    0 |    20 |    6 |    10 |    0 |    20 |
-| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    6 |  1500 |    0 |   450 |    0 |    40 |   10 |    20 |    0 |    20 |
+| X0Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |   16 |    50 |   32 |    50 |  684 |  1200 |  220 |   400 |    0 |    20 |    4 |    10 |    0 |    20 |
+| X1Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   43 |  1500 |    4 |   450 |    0 |    40 |   12 |    20 |    0 |    20 |
 | X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1500 |    0 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
 | X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1800 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
@@ -112,7 +112,7 @@ Table of Contents
 +----+----+----+
 | Y2 |  0 |  0 |
 | Y1 |  1 |  0 |
-| Y0 |  4 |  2 |
+| Y0 |  3 |  3 |
 +----+----+----+
 
 
@@ -135,7 +135,7 @@ Table of Contents
 +----+------+-----+
 | Y2 |    0 |   0 |
 | Y1 |    0 |   0 |
-| Y0 |  685 |  10 |
+| Y0 |  657 |  38 |
 +----+------+-----+
 
 
@@ -158,7 +158,7 @@ Table of Contents
 +----+-----+-----+
 | Y2 |   0 |   0 |
 | Y1 |   0 |   0 |
-| Y0 |  46 |  16 |
+| Y0 |  37 |  25 |
 +----+-----+-----+
 
 
@@ -181,7 +181,7 @@ Table of Contents
 +----+----+----+
 | Y2 |  0 |  0 |
 | Y1 |  1 |  0 |
-| Y0 |  6 |  0 |
+| Y0 |  0 |  6 |
 +----+----+----+
 
 
@@ -214,9 +214,8 @@ Table of Contents
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                   |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------+
-| g0        | n/a   | BUFG/O          | None       |         685 |               0 | 676 |      0 |    6 |   0 |  0 |    0 |   0 |       0 | okHI/ti_clk           |
-| g1        | n/a   | BUFG/O          | None       |          46 |               0 |  39 |      0 |    6 |   0 |  0 |    0 |   0 |       0 | spi_pipe_clk_BUFG     |
-| g2        | n/a   | BUFG/O          | None       |           6 |               0 |   6 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sclk_OBUF_BUFG        |
+| g0        | n/a   | BUFG/O          | None       |         657 |               0 | 651 |      0 |    4 |   0 |  0 |    0 |   0 |       0 | okHI/ti_clk           |
+| g1        | n/a   | BUFG/O          | None       |          37 |               0 |  33 |      0 |    4 |   0 |  0 |    0 |   0 |       0 | spi_pipe_clk_BUFG     |
 | g3        | n/a   | BUFG/O          | None       |           1 |               0 |   0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | okHI/mmcm0_clkfb_bufg |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -230,8 +229,9 @@ Table of Contents
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net               |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-------------------+
-| g0        | n/a   | BUFG/O          | None       |          10 |               0 |  0 |      0 |   10 |   0 |  0 |    0 |   0 |       0 | okHI/ti_clk       |
-| g1        | n/a   | BUFG/O          | None       |          16 |               0 |  6 |      0 |   10 |   0 |  0 |    0 |   0 |       0 | spi_pipe_clk_BUFG |
+| g0        | n/a   | BUFG/O          | None       |          38 |               0 | 25 |      0 |   12 |   0 |  0 |    0 |   0 |       0 | okHI/ti_clk       |
+| g1        | n/a   | BUFG/O          | None       |          25 |               0 | 12 |      0 |   12 |   0 |  0 |    0 |   0 |       0 | spi_pipe_clk_BUFG |
+| g2        | n/a   | BUFG/O          | None       |           6 |               0 |  6 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | sclk_OBUF_BUFG    |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -276,7 +276,7 @@ resize_pblock [get_pblocks {CLKAG_spi_pipe_clk_BUFG}] -add {CLOCKREGION_X0Y0:CLO
 #startgroup
 create_pblock {CLKAG_sclk_OBUF_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_sclk_OBUF_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=sclk_OBUF_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="sclk_OBUF_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_sclk_OBUF_BUFG}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+resize_pblock [get_pblocks {CLKAG_sclk_OBUF_BUFG}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
 # Clock net "okHI/ti_clk" driven by instance "okHI/mmcm0_bufg" located at site "BUFGCTRL_X0Y0"

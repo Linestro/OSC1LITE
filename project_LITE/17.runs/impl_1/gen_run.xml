@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a15tftg256-1" LaunchTime="1546721044">
+<GenRun Id="impl_1" LaunchPart="xc7a15tftg256-1" LaunchTime="1546724986">
   <File Type="PWROPT-DRC" Name="OSC1_LITE_Control_drc_pwropted.rpt"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="OSC1_LITE_Control_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="OSC1_LITE_Control_timing_summary_init.rpt"/>

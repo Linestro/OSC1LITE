@@ -54,7 +54,7 @@ assign address_byte = (mode == 3'b001) ? 8'b00000001 		// wirte (See Manual Page
 															
 assign full_command = (mode == 3'b010) ?  {address_byte, 16'b0000000000000010} // if read, set read DAC config register
 					: (mode == 3'b100) ?  {address_byte, 16'b0000000000000001} // if reset, set RST bit to 1
-					: (mode == 3'b011) ?  {address_byte, 16'b0001000000000110} // if set control
+					: (mode == 3'b011) ?  {address_byte, 16'b0001000000000111} // if set control
 					: (mode == 3'b101) ?  {address_byte, 16'b0000000000000000} // if config, set WD bits to 0
 					: (mode == 3'b000) ?  {address_byte, 16'b0000000000000000}
 					:  pipe ? {address_byte, data_from_memory} 
