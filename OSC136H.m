@@ -159,13 +159,23 @@ classdef OSC136H < handle
                 return
             end
             fprintf('Successfully opened board\n')
-% this.Configure('OSC1_36_H_uDriver_Control (2).bit');
             this.Configure('OSC1_LITE_Control.bit');
             this.SysReset();
             pause(0.1);
             ec = this.SetControlReg();
         end
         
+        function ec = SetAllZero(this)
+            for channel = 0: 11
+            	this.WriteToWireIn(hex2dec('03') + channel, 0, 16, 0);
+            end
+        end
+
+        function ec = SetAllHigh(this)
+            for channel = 0: 11
+            	this.WriteToWireIn(hex2dec('03') + channel, 0, 16, 2^14);
+            end
+        end
 
         % Reset the electronics, as well as setting all parameters to 0.
         function ec = SysReset(this)
@@ -185,12 +195,13 @@ classdef OSC136H < handle
 
             this.WriteToWireIn(hex2dec('01'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
-            this.WriteToWireIn(hex2dec('03'), 0, 16, 0);
+            
+            this.SetAllZero();
 
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
         end      
 
-        function ec = EnableWrite(this, value)
+        function ec = EnableWrite(this, channel, value)
             ec = 0;
             open = calllib('okFrontPanel', 'okFrontPanel_IsOpen', this.dev);
             if ~open
@@ -199,13 +210,13 @@ classdef OSC136H < handle
                 return
             end
             fprintf('Writing %d to the register\n', value)
-            this.WriteToWireIn(hex2dec('03'), 0, 16, value);	% Update the value first to avoid potential data loss
-            this.WriteToWireIn(hex2dec('00'), 0, 16, 1);		
-            this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
-            pause(0.1);
+            this.WriteToWireIn(hex2dec('03') + channel, 0, 16, value);	% Update the value first to avoid potential data loss
+            % this.WriteToWireIn(hex2dec('00'), 0, 16, 1);		
+            % this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
+            % pause(0.1);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
             pause(0.1);
-            this.SetNoop();
+            % this.SetNoop();
         end
 
         function ec = EnableRead(this)
@@ -280,7 +291,7 @@ classdef OSC136H < handle
             fclose(fd);
         end    
 
-        function ec = TriggerPipe(this, num_of_pulses, cont)
+        function ec = TriggerPipe(this, channel, num_of_pulses, cont)
             ec = -1;
             if ~this.isOpen()
                 fprintf('Board not open\n')
@@ -330,7 +341,7 @@ classdef OSC136H < handle
             success_ret = calllib('okFrontPanel', 'okFrontPanel_WriteToPipeIn', this.dev, hex2dec('80'), 2 * SIZE, data_out);
             fprintf('Success %d \n', success_ret);
             
-            this.WriteToWireIn(hex2dec('00'), 0, 16, 2);    % switch to pipe mode
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 2 * (channel + 1));    % switch to pipe mode
             pause(0.1);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 1);    % switch to write mode
 
