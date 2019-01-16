@@ -277,6 +277,16 @@ classdef OSC136H < handle
             this.WriteToWireIn(hex2dec('01'), 0, 16, 0);
         end
 
+        function MatTrigger(this, cus_time)
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
+            this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
+            for i = 0: cus_time
+                for channel = 0: 11
+            	this.WriteToWireIn(hex2dec('03') + channel, 0, 16, 2^14);
+            	this.WriteToWireIn(hex2dec('03') + channel, 0, 16, 0);
+                end
+            end
+        end
 
         function tlines = SavePipeFromFile(this, filename)
             fprintf('Saving pipe data from %s\n', filename)
