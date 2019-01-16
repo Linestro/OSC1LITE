@@ -78,6 +78,7 @@ classdef OSC136H < handle
             calllib('okFrontPanel', 'okFrontPanel_SetWireInValue', this.dev, endpoint, val, mask);
             calllib('okFrontPanel', 'okFrontPanel_UpdateWireIns', this.dev);
             fprintf('WriteToWireIn %d: %d\n', endpoint, value);
+            pause(0.05);
         end
                 
         % Disconnect
@@ -161,17 +162,20 @@ classdef OSC136H < handle
             fprintf('Successfully opened board\n')
             this.Configure('OSC1_LITE_Control.bit');
             this.SysReset();
-            pause(0.1);
             ec = this.SetControlReg();
         end
         
-        function ec = SetAllZero(this)
+        function SetAllZero(this)	
+            	this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
+            	this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
             for channel = 0: 11
             	this.WriteToWireIn(hex2dec('03') + channel, 0, 16, 0);
             end
         end
 
-        function ec = SetAllHigh(this)
+        function SetAllHigh(this)	
+            	this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
+            	this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
             for channel = 0: 11
             	this.WriteToWireIn(hex2dec('03') + channel, 0, 16, 2^14);
             end
@@ -190,7 +194,7 @@ classdef OSC136H < handle
             fprintf('Reseting system to default state\n')
 
             this.WriteToWireIn(hex2dec('01'), 0, 16, 4);
-            pause(0.1);
+            % pause(0.1);
             this.WriteToWireIn(hex2dec('00'), 0, 16, 1);
 
             this.WriteToWireIn(hex2dec('01'), 0, 16, 0);
@@ -212,10 +216,10 @@ classdef OSC136H < handle
             fprintf('Writing %d to the register\n', value)
             this.WriteToWireIn(hex2dec('03') + channel, 0, 16, value);	% Update the value first to avoid potential data loss
             % this.WriteToWireIn(hex2dec('00'), 0, 16, 1);		
-            % this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
             % pause(0.1);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
-            pause(0.1);
+            % pause(0.1);
             % this.SetNoop();
         end
 
@@ -229,9 +233,9 @@ classdef OSC136H < handle
             end
             fprintf('Reading from the register\n')
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
-            pause(0.1);
+            % pause(0.1);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 2);
-            pause(0.1);
+            % pause(0.1);
             this.SetNoop();
         end
 
@@ -246,7 +250,7 @@ classdef OSC136H < handle
             fprintf('Clearing the register\n')
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 1);
-            pause(0.1);
+            % pause(0.1);
             this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
             this.SetNoop();
         end    
@@ -262,14 +266,14 @@ classdef OSC136H < handle
             fprintf('Setting Control Register\n')
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 5);
-            pause(0.1);
+            % pause(0.1);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 3);
-            pause(0.1);
+            % pause(0.1);
             this.SetNoop();
         end    
 
         function SetNoop(this)
-        	pause(0.1);
+        	% pause(0.1);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 0);
         end
 
@@ -307,7 +311,7 @@ classdef OSC136H < handle
             end
 
             this.WriteToWireIn(hex2dec('00'), 0, 16, 1);
-            pause(0.1);
+            % pause(0.1);
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
 
             if cont == 0
@@ -341,7 +345,7 @@ classdef OSC136H < handle
             success_ret = calllib('okFrontPanel', 'okFrontPanel_WriteToPipeIn', this.dev, hex2dec('80'), 2 * SIZE, data_out);
             fprintf('Success %d \n', success_ret);
             
-            this.WriteToWireIn(hex2dec('00'), 0, 16, 2 * (channel + 1));    % switch to pipe mode
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 2);    % switch to pipe mode
             pause(0.1);
             this.WriteToWireIn(hex2dec('01'), 0, 16, 1);    % switch to write mode
 
