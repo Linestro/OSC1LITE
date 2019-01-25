@@ -78,7 +78,7 @@ classdef OSC136H < handle
             calllib('okFrontPanel', 'okFrontPanel_SetWireInValue', this.dev, endpoint, val, mask);
             calllib('okFrontPanel', 'okFrontPanel_UpdateWireIns', this.dev);
             fprintf('WriteToWireIn %d: %d\n', endpoint, value);
-            pause(0.05);
+            % pause(0.05);
         end
                 
         % Disconnect
@@ -150,6 +150,7 @@ classdef OSC136H < handle
         function ec = ConnectToFirst(this)
             % For now, all this function does is connect to the first
             % available board.
+            ec = 0;
             serial = this.GetBoardSerials();
             this.dev = calllib('okFrontPanel', 'okFrontPanel_Construct');
             calllib('okFrontPanel', 'okFrontPanel_OpenBySerial', this.dev, serial);
@@ -161,8 +162,13 @@ classdef OSC136H < handle
             end
             fprintf('Successfully opened board\n')
             this.Configure('OSC1_LITE_Control.bit');
-            this.SysReset();
-            ec = this.SetControlReg();
+            pause(0.5);
+            if this.SysReset() == -1 || this.SetControlReg() == -1
+                ec = -1;
+            	return
+            end
+
+            this.WriteToWireIn(hex2dec('17'), 0, 16, 3);
         end
         
         function SetAllZero(this)	
@@ -194,7 +200,6 @@ classdef OSC136H < handle
             fprintf('Reseting system to default state\n')
 
             this.WriteToWireIn(hex2dec('01'), 0, 16, 4);
-            % pause(0.1);
             this.WriteToWireIn(hex2dec('00'), 0, 16, 1);
 
             this.WriteToWireIn(hex2dec('01'), 0, 16, 0);
@@ -203,6 +208,8 @@ classdef OSC136H < handle
             this.SetAllZero();
 
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
+            this.WriteToWireIn(hex2dec('01'), 0, 16, 0);
+            this.WriteToWireIn(hex2dec('02'), 0, 16, 0);
         end      
 
         function ec = EnableWrite(this, channel, value)
@@ -305,7 +312,7 @@ classdef OSC136H < handle
             fclose(fd);
         end    
 
-        function ec = TriggerPipe(this, channel, num_of_pulses, cont)
+        function ec = TriggerPipe(this, channel, num_of_pulses, cont, pipe_data)
             ec = -1;
             if ~this.isOpen()
                 fprintf('Board not open\n')

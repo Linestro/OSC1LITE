@@ -26,10 +26,10 @@ module OSC1_LITE_Control(
 	*/
 	
 	output wire [11:0] clear,
-    output wire [11:0] latch,
-    output wire [11:0] sclk,
-    output wire [11:0] din,
-    input wire [11:0] sdo_bit
+    	output wire [11:0] latch,
+    	output wire [11:0] sclk,
+    	output wire [11:0] din,
+    	input wire [11:0] sdo_bit
 	
 	
 	);
@@ -40,16 +40,19 @@ wire [30:0]  ok1;
 wire [16:0]  ok2;
 
 wire [13:0]  sys_ctrl_pad1;
-wire [12:0]  sys_ctrl_pad2;
+wire [12:0]   sys_ctrl_pad2;
 wire [14:0]  sys_ctrl_pad3;
+wire [12:0]  sys_ctrl_pad4;
 
-// reg [6:0] 	 clk_counter;
+reg [6:0] 	clk_counter;
+wire[6:0]	division;
 
 
 
 //input wire 		sdo_bit;
 wire 		rst;
 wire        pipe;	
+wire [2:0]	div_mode;
 wire [2:0]	mode;
 wire 		clear_request;
 
@@ -62,23 +65,28 @@ wire [191:0] data_from_user;
 
 
 
-wire pipe_in_write_enable;
-wire pipe_out_read_enable;
+wire 		pipe_in_write_enable;
+wire 		pipe_out_read_enable;
 
-wire [15:0]  pipe_in_write_data;
-wire [15:0]  pipe_out_read_data;
+wire [15:0]  	pipe_in_write_data;
+wire [15:0]  	pipe_out_read_data;
 
-wire [15:0]  period;
-wire [15:0]  num_of_pulses;
+wire [15:0]  	period;
+wire [15:0]  	num_of_pulses;
 
-wire [11:0]	 spi_pipe_clk;
+wire [11:0]	spi_pipe_clk;
+wire 		clk_pulse;
 
 assign hi_muxsel = 1'b0;
 //assign current_to_dac_chip = pipe ? {pipe_out_read_data[1:0],pipe_out_read_data[15:8]} : data_from_user;
 assign led = rst ? 8'b10101010 : {5'b11111,~mode};
+assign division = (div_mode == 3'b001) ? 7'b0000100 : (div_mode == 3'b010) ? 7'b0010100 : (div_mode == 3'b011) ? 7'b0101000 : 7'b1000000;
+//assign clk_pulse = clk;
+assign clk_pulse = (div_mode == 3'b000) ? clk : (clk_counter == 0);
+
 
 spi_controller dac_spi0 [11:0](
-	.clk(clk), //(clk_counter[1]),	// Opal Kelly ti_clk
+	.clk(clk_pulse), //(clk_counter[1]),	// Opal Kelly ti_clk
 	.rst(rst),	// Opal Kelly reset
 	.mode(mode), // Opal Kelly write bit: 2'b00 for nop, 2'b01 for write, 2'b10 for read
 	.clear_request(clear_request),		// OK clr DAC pin
@@ -103,26 +111,19 @@ spi_controller dac_spi(
 	.rst(rst),	// Opal Kelly reset
 	.mode(mode), // Opal Kelly write bit: 2'b00 for nop, 2'b01 for write, 2'b10 for read
 	.clear_request(clear_request),		// OK clr DAC pin
-
 	.pipe(pipe),
 	.data_from_memory({pipe_out_read_data[7:0],pipe_out_read_data[15:8]}),
 	.data_from_user(data_from_user5),	// waveform_info
-
-
 	.sdo_bit(sdo_bit5),		
-
 	//.sdo(sdo),
-
 	// .sdo(sdo),		// DAC output sdo[15:0]. Should contain read data only when read from register
 					// For non-feedback control purpose, this variable should not be affecting functionality. See Manual Page 10.
-
 	.clear(clear5),	// DAC input clr
 	.latch(latch5),	// DAC input latch
 	.sclk(sclk5),	// DAC input sclk
 	.din(din5),		// DAC input din
 	.spi_pipe_clk(spi_pipe_clk)
     );
-
 */
 
 
@@ -168,6 +169,7 @@ okWireIn     wi0e (.ok1(ok1),                           .ep_addr(8'h0E), .ep_dat
 
 okWireIn     wi15 (.ok1(ok1),                           .ep_addr(8'h15), .ep_dataout(period[15:0]));
 okWireIn     wi16 (.ok1(ok1),                           .ep_addr(8'h16), .ep_dataout(num_of_pulses[15:0]));
+okWireIn     wi17 (.ok1(ok1),                           .ep_addr(8'h17), .ep_dataout({sys_ctrl_pad4, div_mode}));
 
 //okWireOut    wo21 (.ok1(ok1), .ok2(ok2x[ 0*17 +: 17 ]), .ep_addr(8'h21), .ep_datain(sdo));
 //okWireOut    wo22 (.ok1(ok1), .ok2(ok2x[ 1*17 +: 17 ]), .ep_addr(8'h22), .ep_datain({15'b0,pipe}));
@@ -175,14 +177,15 @@ okWireIn     wi16 (.ok1(ok1),                           .ep_addr(8'h16), .ep_dat
 okPipeIn	pi80 ( .ok1(ok1), .ok2(ok2x[ 0*17 +: 17 ]), .ep_addr(8'h80), .ep_write(pipe_in_write_enable), .ep_dataout(pipe_in_write_data));
 okPipeOut poa0 ( .ok1(ok1), .ok2(ok2x[ 1*17 +: 17 ]), .ep_addr(8'hA0), .ep_read(pipe_out_read_enable), .ep_datain(pipe_out_read_data));
 
-/*
+
 always @ (posedge clk or posedge rst) begin
 	if(rst) begin
 		clk_counter <= 0;
-	end else begin
+	end else if(clk_counter < division)begin
 		clk_counter <= clk_counter + 1;
+	end else begin
+		clk_counter <= 0;
 	end
 end
-*/
 
 endmodule
