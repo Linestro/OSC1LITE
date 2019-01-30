@@ -147,11 +147,11 @@ classdef OSC136H < handle
 
         % Connect
         % Connects the board to the first openly available FPGA.
-        function ec = ConnectToFirst(this)
+        function ec = Connect(this, serial)
             % For now, all this function does is connect to the first
             % available board.
             ec = 0;
-            serial = this.GetBoardSerials();
+            % serial = this.GetBoardSerials();
             this.dev = calllib('okFrontPanel', 'okFrontPanel_Construct');
             calllib('okFrontPanel', 'okFrontPanel_OpenBySerial', this.dev, serial);
             open = calllib('okFrontPanel', 'okFrontPanel_IsOpen', this.dev);
@@ -161,14 +161,13 @@ classdef OSC136H < handle
                 return
             end
             fprintf('Successfully opened board\n')
-            this.Configure('OSC1_LITE_Control.bit');
-            pause(0.5);
-            if this.SysReset() == -1 || this.SetControlReg() == -1
-                ec = -1;
-            	return
-            end
-
-            this.WriteToWireIn(hex2dec('17'), 0, 16, 3);
+            % this.Configure('OSC1_LITE_Control.bit');
+				         %    pause(0.5);
+				         %    if this.SysReset() == -1 || this.SetControlReg() == -1
+				         %    	fprintf('Failed to initialize.\n')
+				         %    	return
+				         %    end
+        					% this.WriteToWireIn(hex2dec('17'), 0, 16, 0);
         end
         
         function SetAllZero(this)	
@@ -318,14 +317,14 @@ classdef OSC136H < handle
                 fprintf('Board not open\n')
                 return
             end
-            [txtfile, path] = uigetfile('*.cwave', 'Select the .cwave file');
-            if ~isequal(txtfile, 0)
-                try
-                pipe_data = this.SavePipeFromFile(strcat(path, txtfile));
-                catch
-                   errordlg('File error.', 'Type Error');
-                end
-            end
+            % [txtfile, path] = uigetfile('*.cwave', 'Select the .cwave file');
+            % if ~isequal(txtfile, 0)
+            %     try
+            %     pipe_data = this.SavePipeFromFile(strcat(path, txtfile));
+            %     catch
+            %        errordlg('File error.', 'Type Error');
+            %     end
+            % end
 
             this.WriteToWireIn(hex2dec('00'), 0, 16, 1);
             % pause(0.1);
