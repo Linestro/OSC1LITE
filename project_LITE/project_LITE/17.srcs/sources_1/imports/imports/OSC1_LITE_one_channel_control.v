@@ -29,7 +29,9 @@ module OSC1_LITE_Control(
     	output wire [11:0] latch,
     	output wire [11:0] sclk,
     	output wire [11:0] din,
-    	input wire [11:0] sdo_bit
+    	input wire [11:0] sdo_bit,
+    	
+    	 output wire khan
 	
 	
 	);
@@ -138,7 +140,8 @@ amp_pipe my_amp_pipe(
 	.pipe_in_write_data(pipe_in_write_data),
 	
 	.pipe_out_read_trigger(pipe_out_read_enable),
-	.pipe_out_read_data(pipe_out_read_data)
+	.pipe_out_read_data(pipe_out_read_data),
+	.khan(khan)
 	
 );
 

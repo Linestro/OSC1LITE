@@ -288,32 +288,32 @@ set_property IOSTANDARD LVCMOS33 [get_ports {latch[10]}]
 ##set_property IOSTANDARD  [get_ports {}]
 
 ## JP2-33 
-#set_property PACKAGE_PIN P4 [get_ports {extrigin[22]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {extrigin[22]}]
+set_property PACKAGE_PIN P4 [get_ports {khan}]
+set_property IOSTANDARD LVCMOS33 [get_ports {khan}]
 
 ## JP2-34 
-#set_property PACKAGE_PIN T4 [get_ports {extrigin[23]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {extrigin[23]}]
+set_property PACKAGE_PIN T4 [get_ports {khan}]
+set_property IOSTANDARD LVCMOS33 [get_ports {khan}]
 
 ## JP2-35 
-#set_property PACKAGE_PIN P5 [get_ports {extrigin[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {extrigin[0]}]
+set_property PACKAGE_PIN P5 [get_ports {khan}]
+set_property IOSTANDARD LVCMOS33 [get_ports {khan}]
 
 ## JP2-36 
 set_property PACKAGE_PIN N6 [get_ports {clear[9]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {clear[9]}]
 
 ## JP2-37 
-#set_property PACKAGE_PIN R5 [get_ports {extrigin[2]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {extrigin[2]}]
+set_property PACKAGE_PIN R5 [get_ports {khan}]
+set_property IOSTANDARD LVCMOS33 [get_ports {khan}]
 
 ## JP2-38 
 set_property PACKAGE_PIN P8 [get_ports {latch[9]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {latch[9]}]
 
 ## JP2-39 
-#set_property PACKAGE_PIN T5 [get_ports {extrigin[4]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {extrigin[4]}]
+set_property PACKAGE_PIN T5 [get_ports {khan}]
+set_property IOSTANDARD LVCMOS33 [get_ports {khan}]
 
 ## JP2-40 
 set_property PACKAGE_PIN R6 [get_ports {sclk[9]}]
@@ -328,8 +328,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports {sclk[9]}]
 ##set_property IOSTANDARD  [get_ports {}]
 
 ## JP2-43 
-#set_property PACKAGE_PIN T9 [get_ports {extrigin[6]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {extrigin[6]}]
+set_property PACKAGE_PIN T9 [get_ports {khan}]
+set_property IOSTANDARD LVCMOS33 [get_ports {khan}]
 
 ## JP2-44 
 set_property PACKAGE_PIN R7 [get_ports {din[9]}]

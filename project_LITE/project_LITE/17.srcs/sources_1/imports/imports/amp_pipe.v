@@ -10,7 +10,9 @@ module amp_pipe(
 	input  wire [15:0]     pipe_in_write_data,
 
 	input  wire				  pipe_out_read_trigger,
-	output wire [15:0]	  pipe_out_read_data
+	output wire [15:0]	  pipe_out_read_data, 
+	
+	output wire khan
 	
 			
 	    );
@@ -37,6 +39,10 @@ reg 			state_read;
 reg			next_state_read;
 
 wire [15:0] 		data_out;
+
+assign khan = reset ? 0 : (pipe_in_write == 1'b1) ? 0 : (num_of_pulses == 16'b0) ? 0 :
+						((pipe_out_read | state_read == 1'b1) && (complete_pulse_counter < num_of_pulses|| (complete_pulse_counter == num_of_pulses && read_counter == 0))) ?
+						(read_counter >= 0 && read_counter <= 16'd400) : 0;
 
 assign pipe_out_read = pipe_out_read_trigger | read_toggle;
 assign pipe_in_write = pipe_in_write_trigger | write_toggle;
