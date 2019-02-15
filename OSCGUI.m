@@ -571,7 +571,7 @@ classdef OSCGUI < handle
                        [bitfile, path] = uigetfile('*.bit', 'Select the control bitfile');
                        if ~isequal(bitfile, 0)
                            this.os.Configure(strcat(path, bitfile));
-				            pause(0.5);
+				            pause(1);
 				            if this.os.SysReset() == -1 || this.os.SetControlReg() == -1
 				            	fprintf('Failed to initialize.\n')
 				            	return
