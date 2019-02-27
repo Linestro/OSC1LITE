@@ -327,7 +327,6 @@ classdef OSC136H < handle
             % end
 
             this.WriteToWireIn(hex2dec('00'), 0, 16, 1);
-            % pause(0.1);
             this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
 
             if cont == 0
@@ -361,8 +360,7 @@ classdef OSC136H < handle
             success_ret = calllib('okFrontPanel', 'okFrontPanel_WriteToPipeIn', this.dev, hex2dec('80'), 2 * SIZE, data_out);
             fprintf('Success %d \n', success_ret);
             
-            this.WriteToWireIn(hex2dec('00'), 0, 16, 2);    % switch to pipe mode
-            pause(0.1);
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 2 ^ (channel + 1));    % switch to pipe mode
             this.WriteToWireIn(hex2dec('01'), 0, 16, 1);    % switch to write mode
 
             persistent buf pv;

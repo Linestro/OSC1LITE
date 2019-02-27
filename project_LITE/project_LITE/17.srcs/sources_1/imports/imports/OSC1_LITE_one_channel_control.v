@@ -41,8 +41,8 @@ wire         ti_clk;
 wire [30:0]  ok1;
 wire [16:0]  ok2;
 
-wire [13:0]  sys_ctrl_pad1;
-wire [12:0]   sys_ctrl_pad2;
+wire [2:0]   sys_ctrl_pad1;
+wire [12:0]  sys_ctrl_pad2;
 wire [14:0]  sys_ctrl_pad3;
 wire [12:0]  sys_ctrl_pad4;
 
@@ -53,7 +53,7 @@ wire[6:0]	division;
 
 //input wire 		sdo_bit;
 wire 		rst;
-wire        pipe;	
+wire [11:0] pipe;	
 wire [2:0]	div_mode;
 wire [2:0]	mode;
 wire 		clear_request;
@@ -93,7 +93,7 @@ spi_controller dac_spi0 [11:0](
 	.mode(mode), // Opal Kelly write bit: 2'b00 for nop, 2'b01 for write, 2'b10 for read
 	.clear_request(clear_request),		// OK clr DAC pin
 
-	.pipe(pipe),
+	.pipe(pipe[11:0]),
 	.data_from_memory({pipe_out_read_data[7:0],pipe_out_read_data[15:8]}),
 	.data_from_user(data_from_user),	// waveform_info
 

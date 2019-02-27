@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a15t-ftg256'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a15t-ftg256'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9988 
+INFO: Helper process launched with PID 43724 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 362.785 ; gain = 82.102
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 363.270 ; gain = 82.898
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'OSC1_LITE_Control' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:4]
 INFO: [Synth 8-638] synthesizing module 'spi_controller' [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:7]
@@ -773,7 +773,7 @@ WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi
 WARNING: [Synth 8-3331] design fifo_generator_v13_1_1 has unconnected port s_axi_awaddr[15]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 571.758 ; gain = 291.074
+Finished RTL Elaboration : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 572.246 ; gain = 291.875
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -783,7 +783,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 571.758 ; gain = 291.074
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 572.246 ; gain = 291.875
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 126 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -820,29 +820,29 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM128X1S => RAM128X1S (RAMS64E, RAMS64E, MUXF7): 8 instances
   RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 719.559 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 719.043 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 719.559 ; gain = 438.875
+Finished Constraint Validation : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 719.043 ; gain = 438.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a15tftg256-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 719.559 ; gain = 438.875
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 719.043 ; gain = 438.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for my_amp_pipe/memory. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 719.559 ; gain = 438.875
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 719.043 ; gain = 438.672
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/project_LITE/17.srcs/sources_1/imports/imports/DAC_spi_master.v:42]
 WARNING: [Synth 8-6014] Unused sequential element write_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/project_LITE/17.srcs/sources_1/imports/imports/amp_pipe.v:57]
 WARNING: [Synth 8-6014] Unused sequential element clk_counter_reg was removed.  [C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/project_LITE/17.srcs/sources_1/imports/imports/OSC1_LITE_one_channel_control.v:87]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 719.559 ; gain = 438.875
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 719.043 ; gain = 438.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -917,34 +917,12 @@ INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.nati
 INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[2]) is unused and will be removed from module blk_mem_gen_v8_3_6.
 INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[1]) is unused and will be removed from module blk_mem_gen_v8_3_6.
 INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.rdaddrecc_mux_reg[0]) is unused and will be removed from module blk_mem_gen_v8_3_6.
-WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[10]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[11]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[12]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[13]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[14]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[15]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[2]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[3]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[4]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[5]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[6]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[7]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[8]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[9]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[10]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[11]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[12]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[13]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[14]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[15]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[2]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[3]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[4]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[5]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[6]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[7]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[8]) is unused and will be removed from module okWireIn__1.
-WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[9]) is unused and will be removed from module okWireIn__1.
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[10]) is unused and will be removed from module okWireIn__2.
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[11]) is unused and will be removed from module okWireIn__2.
 WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[12]) is unused and will be removed from module okWireIn__2.
@@ -993,9 +971,31 @@ WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[13]) is unused and wi
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[14]) is unused and will be removed from module okWireIn__3.
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[15]) is unused and will be removed from module okWireIn__3.
 WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[1]) is unused and will be removed from module okWireIn__3.
+WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[2]) is unused and will be removed from module okWireIn__3.
+WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[3]) is unused and will be removed from module okWireIn__3.
+WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[4]) is unused and will be removed from module okWireIn__3.
+WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[5]) is unused and will be removed from module okWireIn__3.
+WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[6]) is unused and will be removed from module okWireIn__3.
+WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[7]) is unused and will be removed from module okWireIn__3.
+WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[8]) is unused and will be removed from module okWireIn__3.
+WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[9]) is unused and will be removed from module okWireIn__3.
+WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[10]) is unused and will be removed from module okWireIn.
+WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[11]) is unused and will be removed from module okWireIn.
+WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[12]) is unused and will be removed from module okWireIn.
+WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[13]) is unused and will be removed from module okWireIn.
+WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[14]) is unused and will be removed from module okWireIn.
+WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[15]) is unused and will be removed from module okWireIn.
+WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[3]) is unused and will be removed from module okWireIn.
+WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[4]) is unused and will be removed from module okWireIn.
+WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[5]) is unused and will be removed from module okWireIn.
+WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[6]) is unused and will be removed from module okWireIn.
+WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[7]) is unused and will be removed from module okWireIn.
+WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[8]) is unused and will be removed from module okWireIn.
+WARNING: [Synth 8-3332] Sequential element (ep_datahold_reg[9]) is unused and will be removed from module okWireIn.
+WARNING: [Synth 8-3332] Sequential element (ep_dataout_reg[10]) is unused and will be removed from module okWireIn.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 719.559 ; gain = 438.875
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 719.043 ; gain = 438.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1007,13 +1007,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 719.559 ; gain = 438.875
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 719.043 ; gain = 438.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:21 . Memory (MB): peak = 719.559 ; gain = 438.875
+Finished Timing Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 719.043 ; gain = 438.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1025,7 +1025,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 725.078 ; gain = 444.395
+Finished Technology Mapping : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 725.402 ; gain = 445.031
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1049,7 +1049,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 725.078 ; gain = 444.395
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 725.402 ; gain = 445.031
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1062,7 +1062,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 725.078 ; gain = 444.395
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 725.402 ; gain = 445.031
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1074,25 +1074,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 725.078 ; gain = 444.395
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 725.402 ; gain = 445.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 725.078 ; gain = 444.395
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 725.402 ; gain = 445.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 725.078 ; gain = 444.395
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 725.402 ; gain = 445.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 725.078 ; gain = 444.395
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 725.402 ; gain = 445.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1111,39 +1111,38 @@ Report Cell Usage:
 |1     |BUFG        |     5|
 |2     |CARRY4      |    49|
 |3     |DNA_PORT    |     1|
-|4     |LUT1        |   108|
-|5     |LUT2        |    87|
-|6     |LUT3        |    74|
-|7     |LUT4        |   186|
-|8     |LUT5        |   141|
-|9     |LUT6        |   701|
+|4     |LUT1        |   110|
+|5     |LUT2        |   122|
+|6     |LUT3        |    92|
+|7     |LUT4        |   215|
+|8     |LUT5        |   226|
+|9     |LUT6        |   624|
 |10    |LUT6_2      |    50|
 |11    |MMCME2_BASE |     1|
-|12    |MUXF7       |    72|
-|13    |RAM128X1S   |     8|
-|14    |RAM32M      |     4|
-|15    |RAMB18E1    |     1|
-|16    |RAMB18E1_1  |     1|
-|17    |RAMB18E1_2  |     1|
-|18    |RAMB36E1    |    16|
-|19    |XORCY       |     1|
-|20    |FDCE        |   135|
-|21    |FDPE        |    44|
-|22    |FDRE        |   977|
-|23    |IBUF        |     8|
-|24    |IBUFG       |     1|
-|25    |IOBUF       |    17|
-|26    |OBUF        |    60|
+|12    |RAM128X1S   |     8|
+|13    |RAM32M      |     4|
+|14    |RAMB18E1    |     1|
+|15    |RAMB18E1_1  |     1|
+|16    |RAMB18E1_2  |     1|
+|17    |RAMB36E1    |    16|
+|18    |XORCY       |     1|
+|19    |FDCE        |   135|
+|20    |FDPE        |    44|
+|21    |FDRE        |   999|
+|22    |IBUF        |     8|
+|23    |IBUFG       |     1|
+|24    |IOBUF       |    17|
+|25    |OBUF        |    60|
 +------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 725.078 ; gain = 444.395
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 725.402 ; gain = 445.031
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1340 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:01:16 . Memory (MB): peak = 725.078 ; gain = 296.594
-Synthesis Optimization Complete : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 725.078 ; gain = 444.395
+Synthesis finished with 0 errors, 0 critical warnings and 1318 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:01:13 . Memory (MB): peak = 725.402 ; gain = 298.234
+Synthesis Optimization Complete : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 725.402 ; gain = 445.031
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 158 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -1158,7 +1157,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 687 Infos, 214 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:27 . Memory (MB): peak = 725.078 ; gain = 446.023
+synth_design: Time (s): cpu = 00:01:19 ; elapsed = 00:01:23 . Memory (MB): peak = 725.738 ; gain = 446.996
 INFO: [Common 17-1381] The checkpoint 'C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/project_LITE/17.runs/synth_1/OSC1_LITE_Control.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 725.078 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Feb 14 21:41:51 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 725.738 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 26 23:48:41 2019...
