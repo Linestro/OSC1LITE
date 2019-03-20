@@ -103,7 +103,8 @@ classdef OSC136H < handle
         % Configure
         % Takes a filename as a path to the bitfile, and loads it onto the
         % FPGA. The desired bitfile is titled 'config.bit'.
-        function Configure(this, filename)
+        function ret = Configure(this, filename)
+           ret = -1;
            ec = calllib('okFrontPanel', 'okFrontPanel_ConfigureFPGA', this.dev, filename);
            if ec ~= "ok_NoError"
                fprintf('Error loading bitfile\n')
@@ -125,6 +126,7 @@ classdef OSC136H < handle
            calllib('okFrontPanel', 'okPLL22150_SetOutputEnable', pll, 1, 1);
            
            calllib('okFrontPanel', 'okFrontPanel_SetPLL22150Configuration', this.dev, pll);
+           ret = 0;
         end
         
         % Gets list of serial numbers for all connected boards
@@ -170,6 +172,29 @@ classdef OSC136H < handle
         					% this.WriteToWireIn(hex2dec('17'), 0, 16, 0);
         end
         
+        function ec = ConnectToFirst(this)
+            % For now, all this function does is connect to the first
+            % available board.
+            ec = 0;
+            serial = this.GetBoardSerials();
+            this.dev = calllib('okFrontPanel', 'okFrontPanel_Construct');
+            calllib('okFrontPanel', 'okFrontPanel_OpenBySerial', this.dev, serial);
+            open = calllib('okFrontPanel', 'okFrontPanel_IsOpen', this.dev);
+            if ~open
+                fprintf('Failed to open board\n')
+                ec = -1;
+                return
+            end
+            fprintf('Successfully opened board\n')
+%             this.Configure('OSC1_LITE_Control.bit');
+			pause(0.5);
+			if this.Configure('OSC1_LITE_Control.bit') == -1 || this.SysReset() == -1 || this.SetControlReg() == -1
+				fprintf('Failed to initialize.\n')
+				return
+			end
+        	this.WriteToWireIn(hex2dec('17'), 0, 16, 0);
+        end
+        
         function SetAllZero(this)	
             	this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
             	this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
@@ -182,7 +207,7 @@ classdef OSC136H < handle
             	this.WriteToWireIn(hex2dec('00'), 0, 16, 0);
             	this.WriteToWireIn(hex2dec('01'), 0, 16, 1);
             for channel = 0: 11
-            	this.WriteToWireIn(hex2dec('03') + channel, 0, 16, 2^14);
+            	this.WriteToWireIn(hex2dec('03') + channel, 0, 16, 2731);
             end
         end
 
@@ -360,7 +385,7 @@ classdef OSC136H < handle
             success_ret = calllib('okFrontPanel', 'okFrontPanel_WriteToPipeIn', this.dev, hex2dec('80'), 2 * SIZE, data_out);
             fprintf('Success %d \n', success_ret);
             
-            this.WriteToWireIn(hex2dec('00'), 0, 16, 2 ^ (channel + 1));    % switch to pipe mode
+            this.WriteToWireIn(hex2dec('00'), 0, 16, 2^16-2);    % switch to pipe mode
             this.WriteToWireIn(hex2dec('01'), 0, 16, 1);    % switch to write mode
 
             persistent buf pv;

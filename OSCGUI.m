@@ -353,9 +353,9 @@ classdef OSCGUI < handle
             align(cancel_button,'Center','None');
             
             ax1 = axes('units','normalized','Parent',this.pipe_f,'position',[0.045 0.078 0.447 0.447],'Visible','off');          
-            myImage = imread('cus_waveform_inst.jpg');
+%             myImage = imread('cus_waveform_inst.jpg');
             axes(ax1);
-            imshow(myImage);
+%             imshow(myImage);
         end
         
         function SaveParameterCallback(this, source, eventdata)

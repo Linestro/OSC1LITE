@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Tue Feb 26 23:49:45 2019
+| Date         : Tue Mar 19 19:00:31 2019
 | Host         : EECS-TOYODA running 64-bit major release  (build 9200)
 | Command      : report_methodology -file OSC1_LITE_Control_methodology_drc_routed.rpt -rpx OSC1_LITE_Control_methodology_drc_routed.rpx
 | Design       : OSC1_LITE_Control
@@ -23,13 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 210
+             Violations found: 207
 +-----------+----------+---------------------------------------------------+------------+
 | Rule      | Severity | Description                                       | Violations |
 +-----------+----------+---------------------------------------------------+------------+
 | TIMING-17 | Warning  | Non-clocked sequential cell                       | 142        |
-| TIMING-18 | Warning  | Missing input or output delay                     | 46         |
-| XDCC-5    | Warning  | User Non-Timing constraint/property overwritten   | 2          |
+| TIMING-18 | Warning  | Missing input or output delay                     | 45         |
 | XDCH-1    | Warning  | Hold option missing in multicycle path constraint | 2          |
 | XDCH-2    | Warning  | Same min and max delay values on IO port          | 18         |
 +-----------+----------+---------------------------------------------------+------------+
@@ -873,121 +872,102 @@ Related violations: <none>
 
 TIMING-18#26 Warning
 Missing input or output delay  
-An output delay is missing on khan relative to clock(s) okHostClk 
+An output delay is missing on led[0] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#27 Warning
 Missing input or output delay  
-An output delay is missing on led[0] relative to clock(s) okHostClk 
+An output delay is missing on led[1] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#28 Warning
 Missing input or output delay  
-An output delay is missing on led[1] relative to clock(s) okHostClk 
+An output delay is missing on led[2] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#29 Warning
 Missing input or output delay  
-An output delay is missing on led[2] relative to clock(s) okHostClk 
+An output delay is missing on led[3] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#30 Warning
 Missing input or output delay  
-An output delay is missing on led[3] relative to clock(s) okHostClk 
+An output delay is missing on led[4] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#31 Warning
 Missing input or output delay  
-An output delay is missing on led[4] relative to clock(s) okHostClk 
+An output delay is missing on led[5] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#32 Warning
 Missing input or output delay  
-An output delay is missing on led[5] relative to clock(s) okHostClk 
+An output delay is missing on led[6] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#33 Warning
 Missing input or output delay  
-An output delay is missing on led[6] relative to clock(s) okHostClk 
+An output delay is missing on led[7] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#34 Warning
 Missing input or output delay  
-An output delay is missing on led[7] relative to clock(s) okHostClk 
+An output delay is missing on sclk[0] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#35 Warning
 Missing input or output delay  
-An output delay is missing on sclk[0] relative to clock(s) okHostClk 
+An output delay is missing on sclk[10] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#36 Warning
 Missing input or output delay  
-An output delay is missing on sclk[10] relative to clock(s) okHostClk 
+An output delay is missing on sclk[11] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#37 Warning
 Missing input or output delay  
-An output delay is missing on sclk[11] relative to clock(s) okHostClk 
+An output delay is missing on sclk[1] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#38 Warning
 Missing input or output delay  
-An output delay is missing on sclk[1] relative to clock(s) okHostClk 
+An output delay is missing on sclk[2] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#39 Warning
 Missing input or output delay  
-An output delay is missing on sclk[2] relative to clock(s) okHostClk 
+An output delay is missing on sclk[3] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#40 Warning
 Missing input or output delay  
-An output delay is missing on sclk[3] relative to clock(s) okHostClk 
+An output delay is missing on sclk[4] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#41 Warning
 Missing input or output delay  
-An output delay is missing on sclk[4] relative to clock(s) okHostClk 
+An output delay is missing on sclk[5] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#42 Warning
 Missing input or output delay  
-An output delay is missing on sclk[5] relative to clock(s) okHostClk 
+An output delay is missing on sclk[6] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#43 Warning
 Missing input or output delay  
-An output delay is missing on sclk[6] relative to clock(s) okHostClk 
+An output delay is missing on sclk[7] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#44 Warning
 Missing input or output delay  
-An output delay is missing on sclk[7] relative to clock(s) okHostClk 
+An output delay is missing on sclk[8] relative to clock(s) okHostClk 
 Related violations: <none>
 
 TIMING-18#45 Warning
 Missing input or output delay  
-An output delay is missing on sclk[8] relative to clock(s) okHostClk 
-Related violations: <none>
-
-TIMING-18#46 Warning
-Missing input or output delay  
 An output delay is missing on sclk[9] relative to clock(s) okHostClk 
-Related violations: <none>
-
-XDCC-5#1 Warning
-User Non-Timing constraint/property overwritten  
-A new XDC property PACKAGE_PIN on khan overrides a previous user property.
-New Source: C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/project_LITE/17.srcs/constrs_1/imports/Desktop/xem7001.xdc (Line: 331)
-Previous Source: C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/project_LITE/17.srcs/constrs_1/imports/Desktop/xem7001.xdc (Line: 315)
-Related violations: <none>
-
-XDCC-5#2 Warning
-User Non-Timing constraint/property overwritten  
-A new XDC property PACKAGE_PIN on latch[10] overrides a previous user property.
-New Source: C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/project_LITE/17.srcs/constrs_1/imports/Desktop/xem7001.xdc (Line: 475)
-Previous Source: C:/Users/yoongroup/Documents/Adam/vivado/project_LITE/project_LITE/17.srcs/constrs_1/imports/Desktop/xem7001.xdc (Line: 275)
 Related violations: <none>
 
 XDCH-1#1 Warning

@@ -26,16 +26,16 @@ module OSC1_LITE_Control(
 	*/
 	
 	output wire [11:0] clear,
-    	output wire [11:0] latch,
-    	output wire [11:0] sclk,
-    	output wire [11:0] din,
-    	input wire [11:0] sdo_bit,
+    output wire [11:0] latch,
+    output wire [11:0] sclk,
+    output wire [11:0] din,
+    input wire [11:0] sdo_bit
     	
-    	 output wire khan
 	
 	
 	);
 
+wire khan;
 // Target interface bus:
 wire         ti_clk;
 wire [30:0]  ok1;
